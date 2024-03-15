@@ -1,0 +1,12 @@
+.component {
+  width: 300px;
+  height: 60px;
+
+  background-color: rgb(65, 75, 218);
+  color: white;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  border-style: none;
+}

@@ -1,0 +1,11 @@
+.component {
+  height: 100svh;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
