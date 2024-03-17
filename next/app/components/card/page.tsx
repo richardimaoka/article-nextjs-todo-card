@@ -1,4 +1,7 @@
 import { TodoCardTitle } from "./TodoCardTitle";
+import { TodoCommentsTab } from "./TodoCommentsTab";
+import { TodoDescriptionBody } from "./TodoDescriptionBody";
+import { TodoDescriptionTitle } from "./TodoDescriptionTitle";
 import { TodoDueDate } from "./TodoDueDate";
 import { TodoStatusLabel } from "./TodoStatusLabel";
 import styles from "./page.module.css";
@@ -16,6 +19,21 @@ export default function Page() {
 
       <div>
         <TodoDueDate />
+      </div>
+
+      <div>
+        <TodoDescriptionTitle />
+      </div>
+
+      <div>
+        <TodoDescriptionBody />
+      </div>
+
+      <div>
+        <TodoCommentsTab selected />
+      </div>
+      <div>
+        <TodoCommentsTab />
       </div>
     </div>
   );

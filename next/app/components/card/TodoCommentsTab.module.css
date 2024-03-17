@@ -1,0 +1,9 @@
+.component {
+  width: max-content;
+  padding: 8px 0px;
+}
+
+.component.selected {
+  font-weight: 700;
+  border-bottom: solid 2px #6786f4;
+}
