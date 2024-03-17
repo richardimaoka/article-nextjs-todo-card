@@ -1,4 +1,4 @@
-import { TodoCard } from "@/app/components/TodoCard";
+import { TodoCard } from "@/app/components/card/TodoCard";
 import styles from "./page.module.css";
 
 export default function Page() {
