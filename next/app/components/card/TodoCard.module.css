@@ -1,6 +1,5 @@
 .component {
   width: 1000px;
-  height: 800px;
 
   background-color: white;
 
@@ -12,6 +11,10 @@
   border-right: solid 1px rgb(207, 207, 207);
 
   padding: 8px;
+}
+
+.left > div {
+  margin-bottom: 20px;
 }
 
 .right {

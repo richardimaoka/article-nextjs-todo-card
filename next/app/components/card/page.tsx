@@ -13,6 +13,8 @@ import { TodoCardCommentAuthor } from "./TodoCardCommentAuthor";
 import { TodoCardComment } from "./TodoCardComment";
 import { TodoCardCommentList } from "./TodoCardCommentList";
 import { TodoCardTabArea } from "./TodoCardTabArea";
+import { TodoCardDescriptionArea } from "./TodoCardDescriptionArea";
+import { TodoCardStatusBar } from "./TodoCardStatusBar";
 
 export default function Page() {
   return (
@@ -24,17 +26,21 @@ export default function Page() {
       <div>
         <TodoCardStatusLabel />
       </div>
-
       <div>
         <TodoCardDueDate />
+      </div>
+      <div>
+        <TodoCardStatusBar />
       </div>
 
       <div>
         <TodoCardDescriptionTitle />
       </div>
-
       <div>
         <TodoCardDescriptionBody />
+      </div>
+      <div>
+        <TodoCardDescriptionArea />
       </div>
 
       <div>
