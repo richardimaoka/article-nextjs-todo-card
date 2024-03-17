@@ -1,8 +1,8 @@
 import styles from "./TodoCardLeftSide.module.css";
-import { TodoCardDescriptionArea } from "./TodoCardDescriptionArea";
-import { TodoCardStatusBar } from "./TodoCardStatusBar";
-import { TodoCardTabArea } from "./TodoCardTabArea";
-import { TodoCardTitle } from "./TodoCardTitle";
+import { TodoCardDescriptionArea } from "./medium/TodoCardDescriptionArea";
+import { TodoCardStatusBar } from "./medium/TodoCardStatusBar";
+import { TodoCardTabArea } from "./medium/TodoCardTabArea";
+import { TodoCardTitle } from "./small/TodoCardTitle";
 interface Props {}
 
 export function TodoCardLeftSide(props: Props) {

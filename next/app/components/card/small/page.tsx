@@ -1,20 +1,20 @@
-import { TodoCardProfilePicture } from "./TodoCardProfilePicture";
-import { TodoCardTimestamp } from "./TodoCardTimestamp";
-import { TodoCardTitle } from "./TodoCardTitle";
+import { TodoCardComment } from "../medium/TodoCardComment";
+import { TodoCardCommentAuthor } from "../medium/TodoCardCommentAuthor";
+import { TodoCardCommentList } from "../medium/TodoCardCommentList";
+import { TodoCardDescriptionArea } from "../medium/TodoCardDescriptionArea";
+import { TodoCardStatusBar } from "../medium/TodoCardStatusBar";
+import { TodoCardTabArea } from "../medium/TodoCardTabArea";
+import { TodoCardTabBar } from "../medium/TodoCardTabBar";
 import { TodoCardCommentBody } from "./TodoCardCommentBody";
 import { TodoCardDescriptionBody } from "./TodoCardDescriptionBody";
 import { TodoCardDescriptionTitle } from "./TodoCardDescriptionTitle";
 import { TodoCardDueDate } from "./TodoCardDueDate";
+import { TodoCardProfilePicture } from "./TodoCardProfilePicture";
 import { TodoCardStatusLabel } from "./TodoCardStatusLabel";
-import styles from "./page.module.css";
 import { TodoCardTab } from "./TodoCardTab";
-import { TodoCardTabBar } from "./TodoCardTabBar";
-import { TodoCardCommentAuthor } from "./TodoCardCommentAuthor";
-import { TodoCardComment } from "./TodoCardComment";
-import { TodoCardCommentList } from "./TodoCardCommentList";
-import { TodoCardTabArea } from "./TodoCardTabArea";
-import { TodoCardDescriptionArea } from "./TodoCardDescriptionArea";
-import { TodoCardStatusBar } from "./TodoCardStatusBar";
+import { TodoCardTimestamp } from "./TodoCardTimestamp";
+import { TodoCardTitle } from "./TodoCardTitle";
+import styles from "./page.module.css";
 
 export default function Page() {
   return (
@@ -29,18 +29,12 @@ export default function Page() {
       <div>
         <TodoCardDueDate />
       </div>
-      <div>
-        <TodoCardStatusBar />
-      </div>
 
       <div>
         <TodoCardDescriptionTitle />
       </div>
       <div>
         <TodoCardDescriptionBody />
-      </div>
-      <div>
-        <TodoCardDescriptionArea />
       </div>
 
       <div>
@@ -49,9 +43,6 @@ export default function Page() {
       <div>
         <TodoCardTab tabName="Activities" />
       </div>
-      <div>
-        <TodoCardTabBar selectTab="Comments" />
-      </div>
 
       <div>
         <TodoCardProfilePicture />
@@ -59,21 +50,9 @@ export default function Page() {
       <div>
         <TodoCardTimestamp />
       </div>
-      <div>
-        <TodoCardCommentAuthor />
-      </div>
 
       <div>
         <TodoCardCommentBody />
-      </div>
-      <div>
-        <TodoCardComment />
-      </div>
-      <div>
-        <TodoCardCommentList />
-      </div>
-      <div>
-        <TodoCardTabArea />
       </div>
     </div>
   );

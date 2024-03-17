@@ -1,6 +1,6 @@
 import styles from "./TodoCardDescriptionArea.module.css";
-import { TodoCardDescriptionBody } from "./TodoCardDescriptionBody";
-import { TodoCardDescriptionTitle } from "./TodoCardDescriptionTitle";
+import { TodoCardDescriptionBody } from "../small/TodoCardDescriptionBody";
+import { TodoCardDescriptionTitle } from "../small/TodoCardDescriptionTitle";
 
 interface Props {}
 
