@@ -1,4 +1,7 @@
+import { ProfilePicture } from "./ProfilePicture";
+import { TodoCardTimestamp } from "./TodoCardTimestamp";
 import { TodoCardTitle } from "./TodoCardTitle";
+import { TodoCommentBody } from "./TodoCommentBody";
 import { TodoCommentsTab } from "./TodoCommentsTab";
 import { TodoDescriptionBody } from "./TodoDescriptionBody";
 import { TodoDescriptionTitle } from "./TodoDescriptionTitle";
@@ -34,6 +37,18 @@ export default function Page() {
       </div>
       <div>
         <TodoCommentsTab />
+      </div>
+
+      <div>
+        <ProfilePicture />
+      </div>
+
+      <div>
+        <TodoCardTimestamp />
+      </div>
+
+      <div>
+        <TodoCommentBody />
       </div>
     </div>
   );
