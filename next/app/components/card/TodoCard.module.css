@@ -7,17 +7,19 @@
 }
 
 .left {
+  /* expand the left panel as wide as it is allowed */
   flex-grow: 1;
   border-right: solid 1px rgb(207, 207, 207);
 
-  padding: 8px;
+  padding: 16px 8px;
 }
 
 .right {
+  /* keep the width to 200px and prevent shrink */
   flex-shrink: 0;
   width: 200px;
 
-  padding: 8px;
+  padding: 16px 8px;
 }
 
 /* From here, delete later */

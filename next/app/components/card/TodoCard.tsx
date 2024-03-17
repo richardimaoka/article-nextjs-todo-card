@@ -1,5 +1,6 @@
 import styles from "./TodoCard.module.css";
 import { TodoCardLeftSide } from "./TodoCardLeftSide";
+import { TodoCardRightSide } from "./TodoCardRightSide";
 
 interface Props {}
 
@@ -10,7 +11,9 @@ export function TodoCard(props: Props) {
         <TodoCardLeftSide />
       </div>
 
-      <div className={styles.right}>right</div>
+      <div className={styles.right}>
+        <TodoCardRightSide />
+      </div>
     </div>
   );
 }
