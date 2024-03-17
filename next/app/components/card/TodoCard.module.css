@@ -13,10 +13,6 @@
   padding: 8px;
 }
 
-.left > div {
-  margin-bottom: 20px;
-}
-
 .right {
   flex-shrink: 0;
   width: 200px;
