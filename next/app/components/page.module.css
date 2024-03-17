@@ -6,3 +6,8 @@
 
   background-color: rgb(238, 238, 238);
 }
+
+.component > div {
+  background-color: white;
+  margin-bottom: 10px;
+}
