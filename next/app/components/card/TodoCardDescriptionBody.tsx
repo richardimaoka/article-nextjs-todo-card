@@ -1,8 +1,8 @@
-import styles from "./TodoDescriptionBody.module.css";
+import styles from "./TodoCardDescriptionBody.module.css";
 
 interface Props {}
 
-export function TodoDescriptionBody(props: Props) {
+export function TodoCardDescriptionBody(props: Props) {
   const text = `Embarking on a shopping mission for tomorrow's breakfast is a delightful
       adventure filled with anticipation for a delicious morning meal. The
       primary items on the shopping list are eggs, milk, and bread, forming the

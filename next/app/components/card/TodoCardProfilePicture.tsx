@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./ProfilePicture.module.css";
+import styles from "./TodoCardProfilePicture.module.css";
 
 interface Props {}
 

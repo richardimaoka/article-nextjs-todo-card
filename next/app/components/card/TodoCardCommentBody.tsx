@@ -1,8 +1,8 @@
-import styles from "./TodoCommentBody.module.css";
+import styles from "./TodoCardCommentBody.module.css";
 
 interface Props {}
 
-export function TodoCommentBody(props: Props) {
+export function TodoCardCommentBody(props: Props) {
   const text = `Embarking on a shopping mission for tomorrow's breakfast is a delightful
       adventure filled with anticipation for a delicious morning meal. The
       primary items on the shopping list are eggs, milk, and bread, forming the

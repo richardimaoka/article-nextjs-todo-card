@@ -1,10 +1,10 @@
-import styles from "./TodoCommentsTab.module.css";
+import styles from "./TodoCardCommentsTab.module.css";
 
 interface Props {
   selected?: boolean;
 }
 
-export function TodoCommentsTab(props: Props) {
+export function TodoCardCommentsTab(props: Props) {
   const className = props.selected
     ? styles.component
     : styles.component + " " + styles.selected;

@@ -1,12 +1,12 @@
-import { ProfilePicture } from "./ProfilePicture";
+import { ProfilePicture } from "./TodoCardProfilePicture";
 import { TodoCardTimestamp } from "./TodoCardTimestamp";
 import { TodoCardTitle } from "./TodoCardTitle";
-import { TodoCommentBody } from "./TodoCommentBody";
-import { TodoCommentsTab } from "./TodoCommentsTab";
-import { TodoDescriptionBody } from "./TodoDescriptionBody";
-import { TodoDescriptionTitle } from "./TodoDescriptionTitle";
-import { TodoDueDate } from "./TodoDueDate";
-import { TodoStatusLabel } from "./TodoStatusLabel";
+import { TodoCardCommentBody } from "./TodoCardCommentBody";
+import { TodoCardCommentsTab } from "./TodoCardCommentsTab";
+import { TodoCardDescriptionBody } from "./TodoCardDescriptionBody";
+import { TodoCardDescriptionTitle } from "./TodoCardDescriptionTitle";
+import { TodoCardDueDate } from "./TodoCardDueDate";
+import { TodoCardStatusLabel } from "./TodoCardStatusLabel";
 import styles from "./page.module.css";
 
 export default function Page() {
@@ -17,26 +17,26 @@ export default function Page() {
       </div>
 
       <div>
-        <TodoStatusLabel />
+        <TodoCardStatusLabel />
       </div>
 
       <div>
-        <TodoDueDate />
+        <TodoCardDueDate />
       </div>
 
       <div>
-        <TodoDescriptionTitle />
+        <TodoCardDescriptionTitle />
       </div>
 
       <div>
-        <TodoDescriptionBody />
+        <TodoCardDescriptionBody />
       </div>
 
       <div>
-        <TodoCommentsTab selected />
+        <TodoCardCommentsTab selected />
       </div>
       <div>
-        <TodoCommentsTab />
+        <TodoCardCommentsTab />
       </div>
 
       <div>
@@ -48,7 +48,7 @@ export default function Page() {
       </div>
 
       <div>
-        <TodoCommentBody />
+        <TodoCardCommentBody />
       </div>
     </div>
   );
