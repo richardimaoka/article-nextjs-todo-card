@@ -14,12 +14,17 @@ import { TodoCardStatusLabel } from "../small/TodoCardStatusLabel";
 import { TodoCardTab } from "../small/TodoCardTab";
 import { TodoCardTimestamp } from "../small/TodoCardTimestamp";
 import { TodoCardTitle } from "../small/TodoCardTitle";
+
+import { TodoCardAssignee } from "./TodoCardAssignee";
+import { TodoCardAssingeeArea } from "./TodoCardAssingeeArea";
+import { TodoCardLabelsArea } from "./TodoCardLabelsArea";
+import { TodoCardWatchersArea } from "./TodoCardWatchersArea";
 import styles from "./page.module.css";
 
 export default function Page() {
   return (
     <div className={styles.component}>
-      <div>
+      {/* <div>
         <TodoCardStatusBar />
       </div>
 
@@ -43,6 +48,19 @@ export default function Page() {
       </div>
       <div>
         <TodoCardTabArea />
+      </div>
+       */}
+
+      <div>
+        <TodoCardAssingeeArea />
+      </div>
+
+      <div>
+        <TodoCardWatchersArea />
+      </div>
+
+      <div>
+        <TodoCardLabelsArea />
       </div>
     </div>
   );
