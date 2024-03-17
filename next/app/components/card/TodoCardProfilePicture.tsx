@@ -3,7 +3,7 @@ import styles from "./TodoCardProfilePicture.module.css";
 
 interface Props {}
 
-export function ProfilePicture(props: Props) {
+export function TodoCardProfilePicture(props: Props) {
   return (
     <Image
       className={styles.component}

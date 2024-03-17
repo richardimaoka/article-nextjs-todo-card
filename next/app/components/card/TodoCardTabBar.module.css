@@ -1,0 +1,12 @@
+.component {
+  border-bottom: solid 2px #b9b9b9;
+}
+
+.layout {
+  /* overlay the bottom solid line */
+  position: relative;
+  bottom: -2px;
+
+  display: flex;
+  column-gap: 20px;
+}

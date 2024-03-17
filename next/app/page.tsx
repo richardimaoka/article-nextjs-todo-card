@@ -1,10 +1,10 @@
-import { AddTodoCardButton } from "./components/AddTodoCardButton";
+import { AddTodoButton } from "./components/AddTodoButton";
 import styles from "./page.module.css";
 
 export default function Page() {
   return (
     <main className={styles.component}>
-      <AddTodoCardButton />
+      <AddTodoButton />
     </main>
   );
 }
