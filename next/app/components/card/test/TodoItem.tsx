@@ -24,6 +24,26 @@ export function TodoItem(props: Props) {
     }
   }
 
+  function editDescription(newDescription: string, finished: boolean) {
+    setItem({ ...item, description: newDescription });
+
+    if (finished) {
+      setEditStatus("Edited");
+    } else {
+      setEditStatus("Editing");
+    }
+  }
+
+  function editItem(newItem: TodoItem, finished: boolean) {
+    setItem(newItem);
+
+    if (finished) {
+      setEditStatus("Edited");
+    } else {
+      setEditStatus("Editing");
+    }
+  }
+
   useEffect(() => {
     async function updateView() {
       // const newItem = await serverAction()
