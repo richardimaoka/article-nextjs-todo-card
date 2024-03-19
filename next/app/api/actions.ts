@@ -1,6 +1,8 @@
 "use server";
 
 import { z } from "zod";
+import { TodoItem } from "./types";
+import { revalidatePath } from "next/cache";
 
 const schema = z.object({
   email: z.string({
@@ -27,11 +29,6 @@ export async function send(args: any) {
   console.log(args);
 }
 
-type TodoItem = {
-  title: string;
-  description: string;
-};
-
 export async function updateTodo(formData: FormData) {
   const a = formData.get("title");
   console.log(a);
@@ -46,4 +43,20 @@ export async function updateTodo(formData: FormData) {
   // });
 
   // return response.json();
+}
+
+export async function updateTodoItem(item: TodoItem): Promise<TodoItem> {
+  console.log(`calling server action ${JSON.stringify(item)}`);
+
+  const url = `http://localhost:3036/items/${item.id}`;
+  const response = await fetch(url, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(item),
+  });
+
+  revalidatePath("/components/card/test");
+  return response.json();
 }
