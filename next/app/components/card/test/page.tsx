@@ -1,3 +1,4 @@
+import { SubmitButton } from "./SubmitButton";
 import { Thread } from "./Thread";
 import { TodoForm } from "./TodoForm";
 import styles from "./page.module.css";
@@ -15,14 +16,17 @@ export default async function Page() {
 
   return (
     <div className={styles.component}>
-      <TodoForm item={item} />
+      <form>
+        <SubmitButton />
+      </form>
+      {/* <TodoForm item={item} />
       <Thread
         messages={[
           { message: "msgg" },
           { message: "msgg" },
           { message: "msgg" },
         ]}
-      />
+      /> */}
     </div>
   );
 }

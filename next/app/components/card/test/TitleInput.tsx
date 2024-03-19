@@ -40,6 +40,14 @@ export function TitleInput(props: Props) {
       onClick={onClick}
     >
       <div>{props.title}</div>
+      <input
+        // This <input> needs to be a different from the above <input>,
+        // which is used when `edit = true`.
+        // Otherwise autoFocus doesn't take effect when `edit` changes
+        type="hidden"
+        name="title"
+        value={props.title}
+      />
     </div>
   );
 }
