@@ -26,3 +26,21 @@ export default async function createUser(formData: FormData) {
 export async function send(args: any) {
   console.log(args);
 }
+
+type TodoItem = {
+  title: string;
+  description: string;
+};
+
+export async function updateTodo(item: TodoItem) {
+  const url = "http://localhost:3036/items";
+  const response = await fetch(url, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(item),
+  });
+
+  return response.json();
+}

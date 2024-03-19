@@ -40,7 +40,7 @@ export function TitleInput(props: Props) {
       style={{ width: "800px", height: "30px", backgroundColor: "white" }}
       onClick={onClick}
     >
-      <div>{props.title}</div>
+      <div>{title}</div>
     </div>
   );
 }
