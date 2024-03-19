@@ -12,6 +12,7 @@ import { TodoCardStatusLabel } from "./TodoCardStatusLabel";
 import { TodoCardTab } from "./TodoCardTab";
 import { TodoCardTimestamp } from "./TodoCardTimestamp";
 import { TodoCardTitle } from "./TodoCardTitle";
+import { TodoCardTitleInput } from "./TodoCardTitleInput";
 import { TodoCardWatcherPicture } from "./TodoCardWatcherPicture";
 import { TodoCardWatchersTitle } from "./TodoCardWatchersTitle";
 import styles from "./page.module.css";
@@ -19,8 +20,11 @@ import styles from "./page.module.css";
 export default function Page() {
   return (
     <div className={styles.component}>
-      {/* <div>
+      <div>
         <TodoCardTitle title="arrr" />
+      </div>
+      <div>
+        <TodoCardTitleInput title="arrr" />
       </div>
       <div>
         <TodoCardStatusLabel />
@@ -48,7 +52,7 @@ export default function Page() {
       </div>
       <div>
         <TodoCardCommentBody />
-      </div> */}
+      </div>
 
       <div>
         <TodoCardAssigneeTitle />
