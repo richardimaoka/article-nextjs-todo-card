@@ -1,7 +1,7 @@
 "use client";
 
 import { useOptimistic } from "react";
-import { send } from "../../../actions";
+import { send } from "../../../api/actions";
 
 type Message = {
   message: string;

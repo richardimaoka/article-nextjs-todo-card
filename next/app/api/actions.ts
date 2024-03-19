@@ -32,15 +32,18 @@ type TodoItem = {
   description: string;
 };
 
-export async function updateTodo(item: TodoItem) {
-  const url = "http://localhost:3036/items";
-  const response = await fetch(url, {
-    method: "PATCH",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(item),
-  });
+export async function updateTodo(formData: FormData) {
+  const a = formData.get("title");
+  console.log(a);
 
-  return response.json();
+  // const url = "http://localhost:3036/items";
+  // const response = await fetch(url, {
+  //   method: "PATCH",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify({}),
+  // });
+
+  // return response.json();
 }

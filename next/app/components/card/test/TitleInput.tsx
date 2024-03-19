@@ -26,6 +26,7 @@ export function TitleInput(props: Props) {
   return edit ? (
     <div style={{ width: "800px", height: "30px", backgroundColor: "white" }}>
       <input
+        name="title"
         onBlur={onBlur}
         autoFocus
         placeholder="enter title"
