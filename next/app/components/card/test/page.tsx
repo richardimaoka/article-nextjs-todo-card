@@ -1,5 +1,5 @@
 import { Thread } from "./Thread";
-import { TitleInput } from "./TitleInput";
+import { TodoForm } from "./TodoForm";
 import styles from "./page.module.css";
 
 interface Props {}
@@ -15,7 +15,7 @@ export default async function Page() {
 
   return (
     <div className={styles.component}>
-      <TitleInput title={item.title} />
+      <TodoForm item={item} />
       <Thread
         messages={[
           { message: "msgg" },

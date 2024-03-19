@@ -4,13 +4,11 @@ import { ChangeEvent, useState } from "react";
 
 interface Props {
   title: string;
+  updateTitle: (newTitle: string) => void;
 }
 
 export function TitleInput(props: Props) {
   const [edit, setEdit] = useState(false);
-
-  // Initialize the `title` state with the props value upon first rendering
-  const [title, setTitle] = useState(props.title);
 
   function onClick() {
     setEdit(true);
@@ -22,7 +20,7 @@ export function TitleInput(props: Props) {
   }
 
   function onChange(e: ChangeEvent<HTMLInputElement>) {
-    setTitle(e.target.value);
+    props.updateTitle(e.target.value);
   }
 
   return edit ? (
@@ -31,7 +29,7 @@ export function TitleInput(props: Props) {
         onBlur={onBlur}
         autoFocus
         placeholder="enter title"
-        value={title}
+        value={props.title}
         onChange={onChange}
       />
     </div>
@@ -40,7 +38,7 @@ export function TitleInput(props: Props) {
       style={{ width: "800px", height: "30px", backgroundColor: "white" }}
       onClick={onClick}
     >
-      <div>{title}</div>
+      <div>{props.title}</div>
     </div>
   );
 }
