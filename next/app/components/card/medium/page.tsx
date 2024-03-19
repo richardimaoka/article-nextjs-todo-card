@@ -13,7 +13,7 @@ import { TodoCardProfilePicture } from "../small/TodoCardProfilePicture";
 import { TodoCardStatusLabel } from "../small/TodoCardStatusLabel";
 import { TodoCardTab } from "../small/TodoCardTab";
 import { TodoCardTimestamp } from "../small/TodoCardTimestamp";
-import { TodoCardTitle } from "../small/TodoCardTitle";
+import { TodoCardTitleDisplay } from "../small/TodoCardTitleDisplay";
 
 import { TodoCardAssignee } from "./TodoCardAssignee";
 import { TodoCardAssingeeArea } from "./TodoCardAssingeeArea";

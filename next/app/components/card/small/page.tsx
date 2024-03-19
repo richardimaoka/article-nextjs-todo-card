@@ -11,7 +11,7 @@ import { TodoCardProfilePicture } from "./TodoCardProfilePicture";
 import { TodoCardStatusLabel } from "./TodoCardStatusLabel";
 import { TodoCardTab } from "./TodoCardTab";
 import { TodoCardTimestamp } from "./TodoCardTimestamp";
-import { TodoCardTitle } from "./TodoCardTitle";
+import { TodoCardTitleDisplay } from "./TodoCardTitleDisplay";
 import { TodoCardTitleInput } from "./TodoCardTitleInput";
 import { TodoCardWatcherPicture } from "./TodoCardWatcherPicture";
 import { TodoCardWatchersTitle } from "./TodoCardWatchersTitle";
@@ -21,7 +21,7 @@ export default function Page() {
   return (
     <div className={styles.component}>
       <div>
-        <TodoCardTitle title="arrr" />
+        <TodoCardTitleDisplay title="arrr" />
       </div>
       <div>
         <TodoCardTitleInput title="arrr" />
