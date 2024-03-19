@@ -1,0 +1,17 @@
+.component {
+  /* avoid annoying extra space at the bottom */
+  display: block;
+
+  width: 100%;
+  min-height: 60px;
+  overflow-y: auto;
+
+  margin: 0px;
+  padding: 0px 3px;
+  box-sizing: border-box;
+
+  /* disable user's manual resize */
+  resize: none;
+
+  font-size: 14px;
+}

@@ -1,6 +1,6 @@
 .component {
   width: max-content;
-  padding: 8px 0px;
+  padding: 8px 4px;
 }
 
 .component.selected {
