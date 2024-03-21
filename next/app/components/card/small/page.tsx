@@ -1,22 +1,21 @@
-import { TodoCardAssigneeName } from "./right/1-assigneee/TodoCardAssigneeName";
-import { TodoCardAssigneePicture } from "./right/1-assigneee/TodoCardAssigneePicture";
-import { TodoCardAssigneeTitle } from "./right/1-assigneee/TodoCardAssigneeTitle";
+import { TodoCardAssigneeName } from "../right/1-assigneee/TodoCardAssigneeName";
+import { TodoCardAssigneePicture } from "../right/1-assigneee/TodoCardAssigneePicture";
+import { TodoCardAssigneeTitle } from "../right/1-assigneee/TodoCardAssigneeTitle";
 import { TodoCardCommentBody } from "../left/4-tabs/comment/TodoCardCommentBody";
-import { TodoCardDescriptionBody } from "../left/3-description/TodoCardDescriptionBody";
 import { TodoCardDescriptionBodyDisplay } from "../left/3-description/TodoCardDescriptionBodyDisplay";
 import { TodoCardDescriptionBodyTextArea } from "../left/3-description/TodoCardDescriptionBodyTextArea";
 import { TodoCardDescriptionTitle } from "../left/3-description/TodoCardDescriptionTitle";
 import { TodoCardDueDate } from "../left/2-status/TodoCardDueDate";
-import { TodoCardLabel } from "./right/3-label/TodoCardLabel";
-import { TodoCardLabelsTitle } from "./right/3-label/TodoCardLabelsTitle";
+import { TodoCardLabel } from "../right/3-label/TodoCardLabel";
+import { TodoCardLabelsTitle } from "../right/3-label/TodoCardLabelsTitle";
 import { TodoCardProfilePicture } from "../left/4-tabs/comment/TodoCardProfilePicture";
 import { TodoCardStatusLabel } from "../left/2-status/TodoCardStatusLabel";
 import { TodoCardTab } from "../left/4-tabs/TodoCardTab";
 import { TodoCardTimestamp } from "../left/4-tabs/comment/TodoCardTimestamp";
 import { TodoCardTitleDisplay } from "../left/1-title/TodoCardTitleDisplay";
 import { TodoCardTitleInput } from "../left/1-title/TodoCardTitleInput";
-import { TodoCardWatcherPicture } from "./right/2-watcher/TodoCardWatcherPicture";
-import { TodoCardWatchersTitle } from "./right/2-watcher/TodoCardWatchersTitle";
+import { TodoCardWatcherPicture } from "../right/2-watcher/TodoCardWatcherPicture";
+import { TodoCardWatchersTitle } from "../right/2-watcher/TodoCardWatchersTitle";
 import styles from "./page.module.css";
 
 export default function Page() {
@@ -38,7 +37,12 @@ export default function Page() {
         <TodoCardDescriptionTitle />
       </div>
       <div>
-        <TodoCardDescriptionBodyDisplay />
+        <TodoCardDescriptionBodyDisplay
+          description={`Embarking on a shopping mission for tomorrow's breakfast is a delightful
+      adventure filled with anticipation for a delicious morning meal. The
+      primary items on the shopping list are eggs, milk, and bread, forming the
+      foundation for a hearty and satisfying breakfast.`}
+        />
       </div>
       <div>
         <TodoCardDescriptionBodyTextArea description="aawith anticipation" />

@@ -1,8 +1,11 @@
+import { TodoItem } from "@/app/api/types";
 import styles from "./TodoCardDescriptionArea.module.css";
 import { TodoCardDescriptionBody } from "./TodoCardDescriptionBody";
 import { TodoCardDescriptionTitle } from "./TodoCardDescriptionTitle";
 
-interface Props {}
+interface Props {
+  item: TodoItem;
+}
 
 export function TodoCardDescriptionArea(props: Props) {
   return (
@@ -11,7 +14,7 @@ export function TodoCardDescriptionArea(props: Props) {
         <TodoCardDescriptionTitle />
       </div>
 
-      <TodoCardDescriptionBody />
+      <TodoCardDescriptionBody item={props.item} />
     </div>
   );
 }

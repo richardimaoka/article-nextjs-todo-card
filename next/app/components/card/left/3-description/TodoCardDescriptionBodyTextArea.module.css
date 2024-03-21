@@ -7,11 +7,13 @@
   overflow-y: auto;
 
   margin: 0px;
-  padding: 0px 3px;
+  padding: 1px 3px;
   box-sizing: border-box;
 
   /* disable user's manual resize */
   resize: none;
 
+  /* inherit root layout's inter font, otherwise, user-agent default is used */
+  font-family: inherit;
   font-size: 14px;
 }
