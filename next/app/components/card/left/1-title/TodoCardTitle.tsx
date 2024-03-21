@@ -37,12 +37,12 @@ export function TodoCardTitle(props: Props) {
   }
 
   return edit ? (
-    <TodoCardTitleDisplay title={props.item.title} onClick={editStart} />
-  ) : (
     <TodoCardTitleInput
       title={title}
       onBlur={(e) => editFinished(e.target.value)}
       onChange={(e) => editInProgress(e.target.value)}
     />
+  ) : (
+    <TodoCardTitleDisplay title={props.item.title} onClick={editStart} />
   );
 }
