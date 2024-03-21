@@ -1,10 +1,10 @@
-import { TodoCardComment } from "../medium/TodoCardComment";
-import { TodoCardCommentAuthor } from "../medium/TodoCardCommentAuthor";
-import { TodoCardCommentList } from "../medium/TodoCardCommentList";
-import { TodoCardDescriptionArea } from "../medium/TodoCardDescriptionArea";
-import { TodoCardStatusBar } from "../medium/TodoCardStatusBar";
-import { TodoCardTabArea } from "../medium/TodoCardTabArea";
-import { TodoCardTabBar } from "../medium/TodoCardTabBar";
+import { TodoCardComment } from "../small/left/4-tabs/comment/TodoCardComment";
+import { TodoCardCommentAuthor } from "../small/left/4-tabs/comment/TodoCardCommentAuthor";
+import { TodoCardCommentList } from "../small/left/4-tabs/comment/TodoCardCommentList";
+import { TodoCardDescriptionArea } from "../small/left/3-description/TodoCardDescriptionArea";
+import { TodoCardStatusBar } from "../small/left/2-status/TodoCardStatusBar";
+import { TodoCardTabArea } from "../small/left/4-tabs/TodoCardTabArea";
+import { TodoCardTabBar } from "../small/left/4-tabs/TodoCardTabBar";
 import { TodoCardCommentBody } from "../small/TodoCardCommentBody";
 import { TodoCardDescriptionBody } from "../small/TodoCardDescriptionBody";
 import { TodoCardDescriptionTitle } from "../small/left/3-description/TodoCardDescriptionTitle";
@@ -15,10 +15,10 @@ import { TodoCardTab } from "../small/left/4-tabs/TodoCardTab";
 import { TodoCardTimestamp } from "../small/TodoCardTimestamp";
 import { TodoCardTitleDisplay } from "../small/left/1-title/TodoCardTitleDisplay";
 
-import { TodoCardAssignee } from "./TodoCardAssignee";
-import { TodoCardAssingeeArea } from "./TodoCardAssingeeArea";
-import { TodoCardLabelsArea } from "./TodoCardLabelsArea";
-import { TodoCardWatchersArea } from "./TodoCardWatchersArea";
+import { TodoCardAssignee } from "../small/right/1-assigneee/TodoCardAssignee";
+import { TodoCardAssingeeArea } from "../small/right/1-assigneee/TodoCardAssingeeArea";
+import { TodoCardLabelsArea } from "../small/right/3-label/TodoCardLabelsArea";
+import { TodoCardWatchersArea } from "../small/right/2-watcher/TodoCardWatchersArea";
 import styles from "./page.module.css";
 
 export default function Page() {

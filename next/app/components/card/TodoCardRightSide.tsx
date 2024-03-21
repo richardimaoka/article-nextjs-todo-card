@@ -1,7 +1,7 @@
 import styles from "./TodoCardRightSide.module.css";
-import { TodoCardAssingeeArea } from "./medium/TodoCardAssingeeArea";
-import { TodoCardLabelsArea } from "./medium/TodoCardLabelsArea";
-import { TodoCardWatchersArea } from "./medium/TodoCardWatchersArea";
+import { TodoCardAssingeeArea } from "./small/right/1-assigneee/TodoCardAssingeeArea";
+import { TodoCardLabelsArea } from "./small/right/3-label/TodoCardLabelsArea";
+import { TodoCardWatchersArea } from "./small/right/2-watcher/TodoCardWatchersArea";
 
 interface Props {}
 

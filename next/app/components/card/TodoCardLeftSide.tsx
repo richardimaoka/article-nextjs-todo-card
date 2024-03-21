@@ -1,7 +1,7 @@
 import styles from "./TodoCardLeftSide.module.css";
-import { TodoCardDescriptionArea } from "./medium/TodoCardDescriptionArea";
-import { TodoCardStatusBar } from "./medium/TodoCardStatusBar";
-import { TodoCardTabArea } from "./medium/TodoCardTabArea";
+import { TodoCardDescriptionArea } from "./small/left/3-description/TodoCardDescriptionArea";
+import { TodoCardStatusBar } from "./small/left/2-status/TodoCardStatusBar";
+import { TodoCardTabArea } from "./small/left/4-tabs/TodoCardTabArea";
 import { TodoCardTitleDisplay } from "./small/left/1-title/TodoCardTitleDisplay";
 interface Props {}
 

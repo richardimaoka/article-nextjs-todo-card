@@ -1,6 +1,6 @@
 import styles from "./TodoCardCommentAuthor.module.css";
-import { TodoCardProfilePicture } from "../small/left/4-tabs/comment/TodoCardProfilePicture";
-import { TodoCardTimestamp } from "../small/left/4-tabs/comment/TodoCardTimestamp";
+import { TodoCardProfilePicture } from "./TodoCardProfilePicture";
+import { TodoCardTimestamp } from "./TodoCardTimestamp";
 
 interface Props {}
 

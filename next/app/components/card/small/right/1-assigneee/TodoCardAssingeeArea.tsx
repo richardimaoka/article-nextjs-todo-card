@@ -1,5 +1,5 @@
 import { TodoCardAssignee } from "./TodoCardAssignee";
-import { TodoCardAssigneeTitle } from "../small/right/1-assigneee/TodoCardAssigneeTitle";
+import { TodoCardAssigneeTitle } from "./TodoCardAssigneeTitle";
 import styles from "./TodoCardAssingeeArea.module.css";
 
 interface Props {}

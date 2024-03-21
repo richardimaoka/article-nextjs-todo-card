@@ -1,4 +1,4 @@
-import { TodoCardCommentList } from "./TodoCardCommentList";
+import { TodoCardCommentList } from "./comment/TodoCardCommentList";
 import styles from "./TodoCardTabArea.module.css";
 import { TodoCardTabBar } from "./TodoCardTabBar";
 
