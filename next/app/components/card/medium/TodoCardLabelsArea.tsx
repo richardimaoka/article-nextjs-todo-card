@@ -1,5 +1,5 @@
-import { TodoCardLabel } from "../small/right/label/TodoCardLabel";
-import { TodoCardLabelsTitle } from "../small/right/label/TodoCardLabelsTitle";
+import { TodoCardLabel } from "../small/right/3-label/TodoCardLabel";
+import { TodoCardLabelsTitle } from "../small/right/3-label/TodoCardLabelsTitle";
 import styles from "./TodoCardLabelsArea.module.css";
 
 interface Props {}

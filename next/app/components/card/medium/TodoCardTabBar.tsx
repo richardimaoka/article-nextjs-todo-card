@@ -1,4 +1,4 @@
-import { TabTypes, TodoCardTab } from "../small/left/tabs/TodoCardTab";
+import { TabTypes, TodoCardTab } from "../small/left/4-tabs/TodoCardTab";
 import styles from "./TodoCardTabBar.module.css";
 
 interface Props {
