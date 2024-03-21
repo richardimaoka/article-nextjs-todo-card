@@ -1,22 +1,22 @@
-import { TodoCardAssigneeName } from "./right/TodoCardAssigneeName";
-import { TodoCardAssigneePicture } from "./right/TodoCardAssigneePicture";
-import { TodoCardAssigneeTitle } from "./right/TodoCardAssigneeTitle";
-import { TodoCardCommentBody } from "./left/TodoCardCommentBody";
-import { TodoCardDescriptionBody } from "./left/TodoCardDescriptionBody";
-import { TodoCardDescriptionBodyDisplay } from "./left/TodoCardDescriptionBodyDisplay";
-import { TodoCardDescriptionBodyInput } from "./left/TodoCardDescriptionBodyInput";
-import { TodoCardDescriptionTitle } from "./left/TodoCardDescriptionTitle";
-import { TodoCardDueDate } from "./left/TodoCardDueDate";
-import { TodoCardLabel } from "./right/TodoCardLabel";
-import { TodoCardLabelsTitle } from "./right/TodoCardLabelsTitle";
-import { TodoCardProfilePicture } from "./left/TodoCardProfilePicture";
-import { TodoCardStatusLabel } from "./left/TodoCardStatusLabel";
-import { TodoCardTab } from "./left/TodoCardTab";
-import { TodoCardTimestamp } from "./left/TodoCardTimestamp";
+import { TodoCardAssigneeName } from "./right/assigneee/TodoCardAssigneeName";
+import { TodoCardAssigneePicture } from "./right/assigneee/TodoCardAssigneePicture";
+import { TodoCardAssigneeTitle } from "./right/assigneee/TodoCardAssigneeTitle";
+import { TodoCardCommentBody } from "./left/comment/TodoCardCommentBody";
+import { TodoCardDescriptionBody } from "./left/description/TodoCardDescriptionBody";
+import { TodoCardDescriptionBodyDisplay } from "./left/description/TodoCardDescriptionBodyDisplay";
+import { TodoCardDescriptionBodyTextArea } from "./left/description/TodoCardDescriptionBodyTextArea";
+import { TodoCardDescriptionTitle } from "./left/description/TodoCardDescriptionTitle";
+import { TodoCardDueDate } from "./left/status/TodoCardDueDate";
+import { TodoCardLabel } from "./right/label/TodoCardLabel";
+import { TodoCardLabelsTitle } from "./right/label/TodoCardLabelsTitle";
+import { TodoCardProfilePicture } from "./left/comment/TodoCardProfilePicture";
+import { TodoCardStatusLabel } from "./left/status/TodoCardStatusLabel";
+import { TodoCardTab } from "./left/tabs/TodoCardTab";
+import { TodoCardTimestamp } from "./left/comment/TodoCardTimestamp";
 import { TodoCardTitleDisplay } from "./left/TodoCardTitleDisplay";
 import { TodoCardTitleInput } from "./left/TodoCardTitleInput";
-import { TodoCardWatcherPicture } from "./right/TodoCardWatcherPicture";
-import { TodoCardWatchersTitle } from "./right/TodoCardWatchersTitle";
+import { TodoCardWatcherPicture } from "./right/watcher/TodoCardWatcherPicture";
+import { TodoCardWatchersTitle } from "./right/watcher/TodoCardWatchersTitle";
 import styles from "./page.module.css";
 
 export default function Page() {
@@ -41,7 +41,7 @@ export default function Page() {
         <TodoCardDescriptionBodyDisplay />
       </div>
       <div>
-        <TodoCardDescriptionBodyInput description="aawith anticipation" />
+        <TodoCardDescriptionBodyTextArea description="aawith anticipation" />
       </div>
       <div>
         <TodoCardTab tabName="Comments" selected />

@@ -1,6 +1,6 @@
 import styles from "./TodoCardComment.module.css";
 import { TodoCardCommentAuthor } from "./TodoCardCommentAuthor";
-import { TodoCardCommentBody } from "../small/TodoCardCommentBody";
+import { TodoCardCommentBody } from "../small/left/comment/TodoCardCommentBody";
 
 interface Props {}
 

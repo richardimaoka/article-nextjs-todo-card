@@ -1,5 +1,5 @@
 import { FocusEventHandler } from "react";
-import styles from "./TodoCardDescriptionBodyInput.module.css";
+import styles from "./TodoCardDescriptionBodyTextArea.module.css";
 
 interface Props {
   description: string;
@@ -8,7 +8,7 @@ interface Props {
   onChange?: FocusEventHandler<HTMLTextAreaElement>;
 }
 
-export function TodoCardDescriptionBodyInput(props: Props) {
+export function TodoCardDescriptionBodyTextArea(props: Props) {
   return (
     <textarea
       className={styles.component}
@@ -16,6 +16,11 @@ export function TodoCardDescriptionBodyInput(props: Props) {
       value={props.description}
       autoFocus
       onChange={props.onChange}
+      readOnly={
+        // To avoid the below warning.
+        //   Warning: You provided a `value` prop to a form field without an `onChange` handler. This will render a read-only field. If the field should be mutable use `defaultValue`. Otherwise, set either `onChange` or `readOnly`
+        !props.onChange
+      }
       onBlur={props.onBlur}
     />
   );

@@ -1,13 +1,13 @@
-import { TodoCardCommentBody } from "./TodoCardCommentBody";
-import { TodoCardDescriptionBody } from "./TodoCardDescriptionBody";
-import { TodoCardDescriptionBodyDisplay } from "./TodoCardDescriptionBodyDisplay";
-import { TodoCardDescriptionBodyInput } from "./TodoCardDescriptionBodyInput";
-import { TodoCardDescriptionTitle } from "./TodoCardDescriptionTitle";
-import { TodoCardDueDate } from "./TodoCardDueDate";
-import { TodoCardProfilePicture } from "./TodoCardProfilePicture";
-import { TodoCardStatusLabel } from "./TodoCardStatusLabel";
-import { TodoCardTab } from "./TodoCardTab";
-import { TodoCardTimestamp } from "./TodoCardTimestamp";
+import { TodoCardCommentBody } from "./comment/TodoCardCommentBody";
+import { TodoCardDescriptionBody } from "./description/TodoCardDescriptionBody";
+import { TodoCardDescriptionBodyDisplay } from "./description/TodoCardDescriptionBodyDisplay";
+import { TodoCardDescriptionBodyTextArea } from "./description/TodoCardDescriptionBodyTextArea";
+import { TodoCardDescriptionTitle } from "./description/TodoCardDescriptionTitle";
+import { TodoCardDueDate } from "./status/TodoCardDueDate";
+import { TodoCardProfilePicture } from "./comment/TodoCardProfilePicture";
+import { TodoCardStatusLabel } from "./status/TodoCardStatusLabel";
+import { TodoCardTab } from "./tabs/TodoCardTab";
+import { TodoCardTimestamp } from "./comment/TodoCardTimestamp";
 import { TodoCardTitleDisplay } from "./TodoCardTitleDisplay";
 import { TodoCardTitleInput } from "./TodoCardTitleInput";
 import styles from "./page.module.css";
@@ -34,7 +34,7 @@ export default function Page() {
         <TodoCardDescriptionBodyDisplay />
       </div>
       <div>
-        <TodoCardDescriptionBodyInput description="aawith anticipation" />
+        <TodoCardDescriptionBodyTextArea description="aawith anticipation" />
       </div>
       <div>
         <TodoCardTab tabName="Comments" selected />

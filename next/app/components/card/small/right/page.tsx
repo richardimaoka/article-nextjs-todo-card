@@ -1,10 +1,10 @@
-import { TodoCardAssigneeName } from "./TodoCardAssigneeName";
-import { TodoCardAssigneePicture } from "./TodoCardAssigneePicture";
-import { TodoCardAssigneeTitle } from "./TodoCardAssigneeTitle";
-import { TodoCardLabel } from "./TodoCardLabel";
-import { TodoCardLabelsTitle } from "./TodoCardLabelsTitle";
-import { TodoCardWatcherPicture } from "./TodoCardWatcherPicture";
-import { TodoCardWatchersTitle } from "./TodoCardWatchersTitle";
+import { TodoCardAssigneeName } from "./assigneee/TodoCardAssigneeName";
+import { TodoCardAssigneePicture } from "./assigneee/TodoCardAssigneePicture";
+import { TodoCardAssigneeTitle } from "./assigneee/TodoCardAssigneeTitle";
+import { TodoCardLabel } from "./label/TodoCardLabel";
+import { TodoCardLabelsTitle } from "./label/TodoCardLabelsTitle";
+import { TodoCardWatcherPicture } from "./watcher/TodoCardWatcherPicture";
+import { TodoCardWatchersTitle } from "./watcher/TodoCardWatchersTitle";
 import styles from "./page.module.css";
 
 export default function Page() {

@@ -7,11 +7,11 @@ import { TodoCardTabArea } from "../medium/TodoCardTabArea";
 import { TodoCardTabBar } from "../medium/TodoCardTabBar";
 import { TodoCardCommentBody } from "../small/TodoCardCommentBody";
 import { TodoCardDescriptionBody } from "../small/TodoCardDescriptionBody";
-import { TodoCardDescriptionTitle } from "../small/left/TodoCardDescriptionTitle";
-import { TodoCardDueDate } from "../small/left/TodoCardDueDate";
-import { TodoCardProfilePicture } from "../small/left/TodoCardProfilePicture";
-import { TodoCardStatusLabel } from "../small/left/TodoCardStatusLabel";
-import { TodoCardTab } from "../small/left/TodoCardTab";
+import { TodoCardDescriptionTitle } from "../small/left/description/TodoCardDescriptionTitle";
+import { TodoCardDueDate } from "../small/left/status/TodoCardDueDate";
+import { TodoCardProfilePicture } from "../small/left/comment/TodoCardProfilePicture";
+import { TodoCardStatusLabel } from "../small/left/status/TodoCardStatusLabel";
+import { TodoCardTab } from "../small/left/tabs/TodoCardTab";
 import { TodoCardTimestamp } from "../small/TodoCardTimestamp";
 import { TodoCardTitleDisplay } from "../small/left/TodoCardTitleDisplay";
 

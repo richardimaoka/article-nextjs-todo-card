@@ -1,4 +1,4 @@
-import { TodoCardWatchersTitle } from "../small/right/TodoCardWatchersTitle";
+import { TodoCardWatchersTitle } from "../small/right/watcher/TodoCardWatchersTitle";
 import { TodoCardWatcher } from "./TodoCardWatcher";
 import styles from "./TodoCardWatchersArea.module.css";
 
