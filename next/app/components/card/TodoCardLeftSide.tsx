@@ -2,7 +2,7 @@ import styles from "./TodoCardLeftSide.module.css";
 import { TodoCardDescriptionArea } from "./medium/TodoCardDescriptionArea";
 import { TodoCardStatusBar } from "./medium/TodoCardStatusBar";
 import { TodoCardTabArea } from "./medium/TodoCardTabArea";
-import { TodoCardTitleDisplay } from "./small/TodoCardTitleDisplay";
+import { TodoCardTitleDisplay } from "./small/left/TodoCardTitleDisplay";
 interface Props {}
 
 export function TodoCardLeftSide(props: Props) {

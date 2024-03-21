@@ -1,4 +1,4 @@
-import { TodoCardWatcherPicture } from "../small/TodoCardWatcherPicture";
+import { TodoCardWatcherPicture } from "../small/right/TodoCardWatcherPicture";
 import styles from "./TodoCardWatcher.module.css";
 
 interface Props {}

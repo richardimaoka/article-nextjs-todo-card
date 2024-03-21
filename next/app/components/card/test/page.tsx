@@ -1,5 +1,5 @@
 import { TodoItem } from "@/app/api/types";
-import { TodoCardTitle } from "../small/TodoCardTitle";
+import { TodoCardTitle } from "../small/left/TodoCardTitle";
 import { SubmitButton } from "./SubmitButton";
 
 import styles from "./page.module.css";

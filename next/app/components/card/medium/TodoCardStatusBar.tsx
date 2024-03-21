@@ -1,6 +1,6 @@
-import { TodoCardDueDate } from "../small/TodoCardDueDate";
+import { TodoCardDueDate } from "../small/left/TodoCardDueDate";
 import styles from "./TodoCardStatusBar.module.css";
-import { TodoCardStatusLabel } from "../small/TodoCardStatusLabel";
+import { TodoCardStatusLabel } from "../small/left/TodoCardStatusLabel";
 
 interface Props {}
 
