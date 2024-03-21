@@ -4,14 +4,14 @@ import { TodoItem } from "@/app/api/types";
 import { useState } from "react";
 import { TodoCardTitleDisplay } from "./TodoCardTitleDisplay";
 import { TodoCardTitleInput } from "./TodoCardTitleInput";
-import { updateTodoItem } from "@/app/api/actions";
+import { updateTodoItemAction } from "@/app/api/actions";
 
 interface Props {
   item: TodoItem;
 }
 
 export function TodoCardTitle(props: Props) {
-  // Set the initial title from props upon first rendering
+  // Initial title from props upon first rendering
   const [title, setTitle] = useState(props.item.title);
 
   // `edit` state allows title to temporarily diverge from props
@@ -23,6 +23,7 @@ export function TodoCardTitle(props: Props) {
 
   function editInProgress(newTitle: string) {
     setTitle(newTitle);
+    setEdit(true);
   }
 
   async function editFinished(newTitle: string) {
@@ -32,7 +33,7 @@ export function TodoCardTitle(props: Props) {
     setEdit(false);
 
     // call server action
-    updateTodoItem(newItem);
+    updateTodoItemAction(newItem);
   }
 
   return edit ? (

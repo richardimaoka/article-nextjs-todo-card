@@ -45,7 +45,7 @@ export async function updateTodo(formData: FormData) {
   // return response.json();
 }
 
-export async function updateTodoItem(item: TodoItem): Promise<TodoItem> {
+export async function updateTodoItemAction(item: TodoItem): Promise<TodoItem> {
   console.log(`calling server action ${JSON.stringify(item)}`);
 
   const url = `http://localhost:3036/items/${item.id}`;

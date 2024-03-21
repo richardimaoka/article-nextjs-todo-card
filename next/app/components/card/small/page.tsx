@@ -3,6 +3,7 @@ import { TodoCardAssigneePicture } from "./TodoCardAssigneePicture";
 import { TodoCardAssigneeTitle } from "./TodoCardAssigneeTitle";
 import { TodoCardCommentBody } from "./TodoCardCommentBody";
 import { TodoCardDescriptionBody } from "./TodoCardDescriptionBody";
+import { TodoCardDescriptionBodyDisplay } from "./TodoCardDescriptionBodyDisplay";
 import { TodoCardDescriptionBodyInput } from "./TodoCardDescriptionBodyInput";
 import { TodoCardDescriptionTitle } from "./TodoCardDescriptionTitle";
 import { TodoCardDueDate } from "./TodoCardDueDate";
@@ -37,7 +38,7 @@ export default function Page() {
         <TodoCardDescriptionTitle />
       </div>
       <div>
-        <TodoCardDescriptionBody />
+        <TodoCardDescriptionBodyDisplay />
       </div>
       <div>
         <TodoCardDescriptionBodyInput description="aawith anticipation" />
