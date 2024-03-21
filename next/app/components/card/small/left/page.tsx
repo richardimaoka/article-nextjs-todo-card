@@ -8,8 +8,8 @@ import { TodoCardProfilePicture } from "./comment/TodoCardProfilePicture";
 import { TodoCardStatusLabel } from "./status/TodoCardStatusLabel";
 import { TodoCardTab } from "./tabs/TodoCardTab";
 import { TodoCardTimestamp } from "./comment/TodoCardTimestamp";
-import { TodoCardTitleDisplay } from "./TodoCardTitleDisplay";
-import { TodoCardTitleInput } from "./TodoCardTitleInput";
+import { TodoCardTitleDisplay } from "./title/TodoCardTitleDisplay";
+import { TodoCardTitleInput } from "./title/TodoCardTitleInput";
 import styles from "./page.module.css";
 
 export default function Page() {
