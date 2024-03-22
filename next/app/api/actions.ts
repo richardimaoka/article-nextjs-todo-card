@@ -1,7 +1,12 @@
 "use server";
 
 import { z } from "zod";
-import { TodoItem } from "./types";
+import {
+  TodoItem,
+  updateTodoComment,
+  updateTodoDescription,
+  updateTodoTitle,
+} from "./types";
 import { revalidatePath } from "next/cache";
 
 const schema = z.object({
@@ -71,14 +76,14 @@ export async function updateTodoTitleAction(
 
   const getResponse = await fetch(url);
   const todo: TodoItem = await getResponse.json();
-  todo.description = newTitle;
+  const newTodo = updateTodoTitle(todo, newTitle);
 
   const response = await fetch(url, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(todo),
+    body: JSON.stringify(newTodo),
   });
 
   revalidatePath("/components/card/test");
@@ -93,14 +98,14 @@ export async function updateTodoDescriptionAction(
 
   const getResponse = await fetch(url);
   const todo: TodoItem = await getResponse.json();
-  todo.description = newDescription;
+  const newTodo = updateTodoDescription(todo, newDescription);
 
   const response = await fetch(url, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(todo),
+    body: JSON.stringify(newTodo),
   });
 
   revalidatePath("/components/card/test");
@@ -110,21 +115,20 @@ export async function updateTodoDescriptionAction(
 export async function updateTodoCommentAction(
   todoId: string,
   commentId: string,
-  newTitle: string
+  newCommentBody: string
 ): Promise<string> {
   const url = `http://localhost:3036/items/${todoId}`;
 
   const getResponse = await fetch(url);
   const todo: TodoItem = await getResponse.json();
-
-  todo.description = newTitle;
+  const newTodo = updateTodoComment(todo, commentId, newCommentBody);
 
   const response = await fetch(url, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(todo),
+    body: JSON.stringify(newTodo),
   });
 
   revalidatePath("/components/card/test");

@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from "uuid";
+
 export type TodoItem = {
   id: string;
   title: string;
@@ -16,7 +18,7 @@ export type TodoComment = {
   id: string;
   body: string;
   author: TodoPerson;
-  createdAt: string;
+  createdAt: Date;
 };
 
 export type TodoLabel = {
@@ -44,12 +46,16 @@ export function updateTodoDescription(
   return { ...todo, description: newDescription };
 }
 
+// done
 export function createTodoComment(
   body: string,
   author: TodoPerson
 ): TodoComment {
-  const id = "A";
-  return { id: id, body: body, author: author, createdAt: "" };
+  // ID generation and timestamp are external dependencies but internalize them for simplicity
+  const id = uuidv4();
+  const now = new Date();
+
+  return { id: id, body: body, author: author, createdAt: now };
 }
 
 // done
@@ -112,6 +118,14 @@ export function updateTodoComment(
   const newTodo: TodoItem = { ...todo, comments: newComments };
 
   return newTodo;
+}
+
+// done
+export function createTodoLabel(name: string, color: string): TodoLabel {
+  // ID generation is an external dependency but internalize it for simplicity
+  const id = uuidv4();
+
+  return { id, name, color };
 }
 
 // done
