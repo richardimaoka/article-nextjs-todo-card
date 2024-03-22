@@ -1,4 +1,4 @@
-import { TodoCardCommentBody } from "./4-tabs/comment/TodoCardCommentBody";
+import { TodoCardCommentBodyDisplay } from "./4-tabs/comment/TodoCardCommentBodyDisplay";
 import { TodoCardDescriptionBody } from "./3-description/TodoCardDescriptionBody.1";
 import { TodoCardDescriptionBodyDisplay } from "./3-description/TodoCardDescriptionDisplay";
 import { TodoCardDescriptionTextArea } from "./3-description/TodoCardDescriptionTextArea";
@@ -49,7 +49,7 @@ export default function Page() {
         <TodoCardTimestamp />
       </div>
       <div>
-        <TodoCardCommentBody />
+        <TodoCardCommentBodyDisplay />
       </div>
     </div>
   );

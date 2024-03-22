@@ -1,7 +1,7 @@
 import { TodoCardAssigneeName } from "../right/1-assigneee/TodoCardAssigneeName";
 import { TodoCardAssigneePicture } from "../right/1-assigneee/TodoCardAssigneePicture";
 import { TodoCardAssigneeTitle } from "../right/1-assigneee/TodoCardAssigneeTitle";
-import { TodoCardCommentBody } from "../left/4-tabs/comment/TodoCardCommentBody";
+import { TodoCardCommentBodyDisplay } from "../left/4-tabs/comment/TodoCardCommentBodyDisplay";
 import { TodoCardDescriptionDisplay } from "../left/3-description/TodoCardDescriptionDisplay";
 import { TodoCardDescriptionTextArea } from "../left/3-description/TodoCardDescriptionTextArea";
 import { TodoCardDescriptionTitle } from "../left/3-description/TodoCardDescriptionTitle";
@@ -60,7 +60,7 @@ export default function Page() {
         <TodoCardTimestamp />
       </div>
       <div>
-        <TodoCardCommentBody commentBody="lorem impsu" />
+        <TodoCardCommentBodyDisplay commentBody="lorem impsu" />
       </div>
 
       <div>

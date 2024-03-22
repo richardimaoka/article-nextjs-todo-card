@@ -36,8 +36,8 @@ export function TodoCardDescription(props: Props) {
     setEdit(true);
   }
 
-  async function editFinished(newTitle: string) {
-    const newItem = { ...props.item, title: newTitle };
+  async function editFinished(newDescription: string) {
+    const newItem = { ...props.item, description: newDescription };
 
     // finish editing
     setEdit(false);

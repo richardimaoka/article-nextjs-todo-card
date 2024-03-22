@@ -1,11 +1,59 @@
-import styles from "./TodoCardCommentBody.module.css";
+"use client";
+
+import { updateTodoComment } from "@/app/api/api";
+import { TodoComment } from "@/app/api/types";
+import { ServerActionContext } from "@/app/components/ServerActionContext";
+import { useContext, useState } from "react";
+import { TodoCardCommentBodyTextArea } from "./TodoCardCommentBodyTextArea";
+import { TodoCardCommentBodyDisplay } from "./TodoCardCommentBodyDisplay";
 
 interface Props {
-  commentBody: string;
-  // optional args, so that you can check component's design alone
-  onClick?: () => void;
+  comment: TodoComment;
 }
 
 export function TodoCardCommentBody(props: Props) {
-  return <div className={styles.component}>{props.commentBody}</div>;
+  // Initial title from props upon first rendering
+  const [initialCommentBody] = useState(props.comment.body);
+  const [commentBody, setCommentBody] = useState(initialCommentBody);
+
+  // `edit` state allows title to temporarily diverge from props
+  const [edit, setEdit] = useState(false);
+
+  // Dependency injection to call or not to call server action
+  const doCallServerAction = useContext(ServerActionContext);
+
+  // Adjusting (stale) state when a prop changes - https://react.dev/learn/you-might-not-need-an-effect#adjusting-some-state-when-a-prop-changes
+  if (initialCommentBody !== props.comment.body) {
+    setCommentBody(props.comment.body);
+  }
+
+  function editStart() {
+    setEdit(true);
+  }
+
+  function editInProgress(newTitle: string) {
+    setCommentBody(newTitle);
+    setEdit(true);
+  }
+
+  async function editFinished(newBody: string) {
+    const newComment = { ...props.comment, body: newBody };
+
+    // finish editing
+    setCommentBody(newBody);
+    setEdit(false);
+
+    // call server action
+    updateTodoComment(doCallServerAction, newComment);
+  }
+
+  return edit ? (
+    <TodoCardCommentBodyTextArea
+      commentBody={commentBody}
+      onBlur={(e) => editFinished(e.target.value)}
+      onChange={(e) => editInProgress(e.target.value)}
+    />
+  ) : (
+    <TodoCardCommentBodyDisplay commentBody={commentBody} onClick={editStart} />
+  );
 }
