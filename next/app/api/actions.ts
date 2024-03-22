@@ -45,16 +45,18 @@ export async function updateTodo(formData: FormData) {
   // return response.json();
 }
 
-export async function updateTodoItemAction(item: TodoItem): Promise<TodoItem> {
-  console.log(`calling server action ${JSON.stringify(item)}`);
+export async function updateTodoItemAction(
+  newItem: TodoItem
+): Promise<TodoItem> {
+  console.log(`calling server action ${JSON.stringify(newItem)}`);
 
-  const url = `http://localhost:3036/items/${item.id}`;
+  const url = `http://localhost:3036/items/${newItem.id}`;
   const response = await fetch(url, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(item),
+    body: JSON.stringify(newItem),
   });
 
   revalidatePath("/components/card/test");

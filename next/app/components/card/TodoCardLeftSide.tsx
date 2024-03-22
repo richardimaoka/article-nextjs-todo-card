@@ -3,6 +3,7 @@ import { TodoCardDescriptionArea } from "./left/3-description/TodoCardDescriptio
 import { TodoCardStatusBar } from "./left/2-status/TodoCardStatusBar";
 import { TodoCardTabArea } from "./left/4-tabs/TodoCardTabArea";
 import { TodoCardTitleDisplay } from "./left/1-title/TodoCardTitleDisplay";
+
 interface Props {}
 
 export function TodoCardLeftSide(props: Props) {
@@ -15,7 +16,11 @@ export function TodoCardLeftSide(props: Props) {
         <TodoCardStatusBar />
       </div>
       <div>
-        <TodoCardDescriptionArea />
+        <TodoCardDescriptionArea item={{
+          id: "",
+          title: "",
+          description: ""
+        }} />
       </div>
       <div>
         <TodoCardTabArea />

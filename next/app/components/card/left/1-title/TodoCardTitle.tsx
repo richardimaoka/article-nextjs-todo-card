@@ -1,10 +1,11 @@
 "use client";
 
 import { TodoItem } from "@/app/api/types";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { TodoCardTitleDisplay } from "./TodoCardTitleDisplay";
 import { TodoCardTitleInput } from "./TodoCardTitleInput";
-import { updateTodoItemAction } from "@/app/api/actions";
+import { ServerActionContext } from "@/app/components/ServerActionContext";
+import { updateTodoItem } from "@/app/api/api";
 
 interface Props {
   item: TodoItem;
@@ -13,6 +14,7 @@ interface Props {
 export function TodoCardTitle(props: Props) {
   // Initial title from props upon first rendering
   const [title, setTitle] = useState(props.item.title);
+  const doCallServerAction = useContext(ServerActionContext);
 
   // `edit` state allows title to temporarily diverge from props
   const [edit, setEdit] = useState(false);
@@ -30,10 +32,11 @@ export function TodoCardTitle(props: Props) {
     const newItem = { ...props.item, title: newTitle };
 
     // finish editing
+    setTitle(newTitle);
     setEdit(false);
 
     // call server action
-    updateTodoItemAction(newItem);
+    updateTodoItem(doCallServerAction, newItem);
   }
 
   return edit ? (
@@ -43,6 +46,6 @@ export function TodoCardTitle(props: Props) {
       onChange={(e) => editInProgress(e.target.value)}
     />
   ) : (
-    <TodoCardTitleDisplay title={props.item.title} onClick={editStart} />
+    <TodoCardTitleDisplay title={title} onClick={editStart} />
   );
 }
