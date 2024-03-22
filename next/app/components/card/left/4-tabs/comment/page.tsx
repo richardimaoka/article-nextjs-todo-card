@@ -13,7 +13,7 @@ export default async function Page() {
       name: "richardimaoka",
       imagePath: "/images/richard.jpg",
     },
-    createdAt: "Apr 4",
+    createdAt: new Date(),
   };
 
   return (

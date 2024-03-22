@@ -17,7 +17,7 @@ export function TodoCardComment(props: Props) {
       name: "richardimaoka",
       imagePath: "/images/richard.jpg",
     },
-    createdAt: "Apr 4",
+    createdAt: new Date(),
   };
   return (
     <div className={styles.component}>

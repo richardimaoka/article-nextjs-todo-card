@@ -171,7 +171,7 @@ export function addWatcher(todo: TodoItem, newWatcher: TodoPerson): TodoItem {
   // Logic to update
   newWatchers.push(newWatcher);
 
-  const newTodo: TodoItem = { ...todo, labels: newWatchers };
+  const newTodo: TodoItem = { ...todo, watchers: newWatchers };
 
   return newTodo;
 }
