@@ -10,6 +10,7 @@ interface Props {
 
 export function TodoCardComment(props: Props) {
   const comment: TodoComment = {
+    id: "asb",
     body: `Embarking on a shopping mission for tomorrow's breakfast is a delightful adventure filled with anticipation for a delicious morning meal. The primary items on the shopping list are eggs, milk, and bread, forming the foundation for a hearty and satisfying breakfast`,
     author: {
       name: "richardimaoka",
