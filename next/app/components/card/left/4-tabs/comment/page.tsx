@@ -1,13 +1,10 @@
-import { TodoComment } from "@/app/api/types";
-import styles from "./TodoCardComment.module.css";
-import { TodoCardCommentAuthor } from "./TodoCardCommentAuthor";
+import { TodoComment, TodoItem } from "@/app/api/types";
+import styles from "./page.module.css";
+import { TodoCardComment } from "./TodoCardComment";
 import { TodoCardCommentBody } from "./TodoCardCommentBody";
+import { TodoCardCommentBodyTextArea } from "./TodoCardCommentBodyTextArea";
 
-interface Props {
-  comment?: TodoComment;
-}
-
-export function TodoCardComment(props: Props) {
+export default async function Page() {
   const comment: TodoComment = {
     body: `Embarking on a shopping mission for tomorrow's breakfast is a delightful adventure filled with anticipation for a delicious morning meal. The primary items on the shopping list are eggs, milk, and bread, forming the foundation for a hearty and satisfying breakfast`,
     author: {
@@ -16,10 +13,12 @@ export function TodoCardComment(props: Props) {
     },
     createdAt: "Apr 4",
   };
+
   return (
     <div className={styles.component}>
-      <TodoCardCommentAuthor />
-      <TodoCardCommentBody commentBody={comment.body} />
+        <TodoCardCommentBody commentBody={comment.body} />
+        <TodoCardCommentBodyTextArea commentBody={comment.body} />
+        <TodoCardComment comment={comment} />
     </div>
   );
 }

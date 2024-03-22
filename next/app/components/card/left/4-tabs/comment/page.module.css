@@ -1,0 +1,13 @@
+.component {
+  min-height: 100svh;
+  max-width: 600px;
+
+  margin: 0 auto;
+
+  background-color: rgb(238, 238, 238);
+}
+
+.component > * {
+  background-color: white;
+  margin-bottom: 10px;
+}
