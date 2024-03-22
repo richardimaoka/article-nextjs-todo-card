@@ -13,7 +13,7 @@ interface Props {
 
 export function TodoCardTitle(props: Props) {
   // Initial title from props upon first rendering
-  const [initialTitle] = useState(props.item.title);
+  const [initialTitle] = useState(props.item.description);
   const [title, setTitle] = useState(initialTitle);
 
   // `edit` state allows title to temporarily diverge from props
@@ -23,8 +23,8 @@ export function TodoCardTitle(props: Props) {
   const doCallServerAction = useContext(ServerActionContext);
 
   // Adjusting (stale) state when a prop changes - https://react.dev/learn/you-might-not-need-an-effect#adjusting-some-state-when-a-prop-changes
-  if (initialTitle !== props.item.title) {
-    setTitle(props.item.title);
+  if (initialTitle !== props.item.description) {
+    setTitle(props.item.description);
   }
 
   function editStart() {

@@ -62,3 +62,71 @@ export async function updateTodoItemAction(
   revalidatePath("/components/card/test");
   return response.json();
 }
+
+export async function updateTodoTitleAction(
+  todoId: string,
+  newTitle: string
+): Promise<string> {
+  const url = `http://localhost:3036/items/${todoId}`;
+
+  const getResponse = await fetch(url);
+  const todo: TodoItem = await getResponse.json();
+  todo.description = newTitle;
+
+  const response = await fetch(url, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(todo),
+  });
+
+  revalidatePath("/components/card/test");
+  return response.json();
+}
+
+export async function updateTodoDescriptionAction(
+  todoId: string,
+  newDescription: string
+): Promise<string> {
+  const url = `http://localhost:3036/items/${todoId}`;
+
+  const getResponse = await fetch(url);
+  const todo: TodoItem = await getResponse.json();
+  todo.description = newDescription;
+
+  const response = await fetch(url, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(todo),
+  });
+
+  revalidatePath("/components/card/test");
+  return response.json();
+}
+
+export async function updateTodoCommentAction(
+  todoId: string,
+  commentId: string,
+  newTitle: string
+): Promise<string> {
+  const url = `http://localhost:3036/items/${todoId}`;
+
+  const getResponse = await fetch(url);
+  const todo: TodoItem = await getResponse.json();
+
+  todo.description = newTitle;
+
+  const response = await fetch(url, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(todo),
+  });
+
+  revalidatePath("/components/card/test");
+  return response.json();
+}

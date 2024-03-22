@@ -15,13 +15,13 @@ export function TodoForm(props: Props) {
   function updateTitle(newTitle: string) {
     setState({
       ...state,
-      title: newTitle,
+      description: newTitle,
     });
   }
 
   return (
     <form action={updateTodo}>
-      <TitleInput title={state.title} updateTitle={updateTitle} />
+      <TitleInput title={state.description} updateTitle={updateTitle} />
       <button type="submit">submit</button>
     </form>
   );

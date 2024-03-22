@@ -28,7 +28,7 @@ export function TodoTitle(props: Props) {
       {edit ? (
         <input
           name="title"
-          value={props.item.title}
+          value={props.item.description}
           placeholder="enter title"
           autoFocus
           onBlur={(e) => {
@@ -39,7 +39,7 @@ export function TodoTitle(props: Props) {
           }}
         />
       ) : (
-        <div>{props.item.title}</div>
+        <div>{props.item.description}</div>
       )}
     </div>
   );

@@ -15,7 +15,7 @@ export function TodoItem(props: Props) {
   const [editStatus, setEditStatus] = useState<EditStatus>("Initial");
 
   function editTitle(newTitle: string, finished: boolean) {
-    setItem({ ...item, title: newTitle });
+    setItem({ ...item, description: newTitle });
 
     if (finished) {
       setEditStatus("Edited");

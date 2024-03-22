@@ -8,7 +8,7 @@ import { TodoCardDescription } from "./TodoCardDescription";
 export default async function Page() {
   const item: TodoItem = {
     id: "a",
-    title: "titleeee",
+    description: "titleeee",
     description: "descreeee",
   };
 
