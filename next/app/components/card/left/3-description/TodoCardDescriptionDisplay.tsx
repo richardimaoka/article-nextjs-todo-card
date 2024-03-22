@@ -1,4 +1,4 @@
-import styles from "./TodoCardDescriptionBodyDisplay.module.css";
+import styles from "./TodoCardDescriptionDisplay.module.css";
 
 interface Props {
   description: string;
@@ -6,7 +6,7 @@ interface Props {
   onClick?: () => void;
 }
 
-export function TodoCardDescriptionBodyDisplay(props: Props) {
+export function TodoCardDescriptionDisplay(props: Props) {
   return (
     <div className={styles.component} onClick={props.onClick}>
       {props.description}

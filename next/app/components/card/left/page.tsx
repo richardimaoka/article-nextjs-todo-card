@@ -1,7 +1,7 @@
 import { TodoCardCommentBody } from "./4-tabs/comment/TodoCardCommentBody";
 import { TodoCardDescriptionBody } from "./3-description/TodoCardDescriptionBody.1";
-import { TodoCardDescriptionBodyDisplay } from "./3-description/TodoCardDescriptionBodyDisplay";
-import { TodoCardDescriptionBodyTextArea } from "./3-description/TodoCardDescriptionBodyTextArea";
+import { TodoCardDescriptionBodyDisplay } from "./3-description/TodoCardDescriptionDisplay";
+import { TodoCardDescriptionTextArea } from "./3-description/TodoCardDescriptionTextArea";
 import { TodoCardDescriptionTitle } from "./3-description/TodoCardDescriptionTitle";
 import { TodoCardDueDate } from "./2-status/TodoCardDueDate";
 import { TodoCardProfilePicture } from "./4-tabs/comment/TodoCardProfilePicture";
@@ -34,7 +34,7 @@ export default function Page() {
         <TodoCardDescriptionBodyDisplay />
       </div>
       <div>
-        <TodoCardDescriptionBodyTextArea description="aawith anticipation" />
+        <TodoCardDescriptionTextArea description="aawith anticipation" />
       </div>
       <div>
         <TodoCardTab tabName="Comments" selected />

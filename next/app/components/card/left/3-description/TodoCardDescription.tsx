@@ -4,14 +4,14 @@ import { updateTodoItem } from "@/app/api/api";
 import { TodoItem } from "@/app/api/types";
 import { ServerActionContext } from "@/app/components/ServerActionContext";
 import { useContext, useState } from "react";
-import { TodoCardDescriptionBodyDisplay } from "./TodoCardDescriptionBodyDisplay";
-import { TodoCardDescriptionBodyTextArea } from "./TodoCardDescriptionBodyTextArea";
+import { TodoCardDescriptionDisplay } from "./TodoCardDescriptionDisplay";
+import { TodoCardDescriptionTextArea } from "./TodoCardDescriptionTextArea";
 
 interface Props {
   item: TodoItem;
 }
 
-export function TodoCardDescriptionBody(props: Props) {
+export function TodoCardDescription(props: Props) {
   // Initial description from props upon first rendering
   const [initialDescription] = useState(props.item.description);
   const [description, setDescription] = useState(initialDescription);
@@ -47,15 +47,12 @@ export function TodoCardDescriptionBody(props: Props) {
   }
 
   return edit ? (
-    <TodoCardDescriptionBodyTextArea
+    <TodoCardDescriptionTextArea
       description={description}
       onBlur={(e) => editFinished(e.target.value)}
       onChange={(e) => editInProgress(e.target.value)}
     />
   ) : (
-    <TodoCardDescriptionBodyDisplay
-      description={description}
-      onClick={editStart}
-    />
+    <TodoCardDescriptionDisplay description={description} onClick={editStart} />
   );
 }

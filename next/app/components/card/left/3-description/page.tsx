@@ -1,9 +1,9 @@
 import { TodoItem } from "@/app/api/types";
-import { TodoCardDescriptionBodyDisplay } from "./TodoCardDescriptionBodyDisplay";
-import { TodoCardDescriptionBodyTextArea } from "./TodoCardDescriptionBodyTextArea";
+import { TodoCardDescriptionDisplay } from "./TodoCardDescriptionDisplay";
+import { TodoCardDescriptionTextArea } from "./TodoCardDescriptionTextArea";
 import { TodoCardDescriptionTitle } from "./TodoCardDescriptionTitle";
 import styles from "./page.module.css";
-import { TodoCardDescriptionBody } from "./TodoCardDescriptionBody";
+import { TodoCardDescription } from "./TodoCardDescription";
 
 export default async function Page() {
   const item: TodoItem = {
@@ -18,13 +18,13 @@ export default async function Page() {
         <TodoCardDescriptionTitle />
       </div>
       <div>
-        <TodoCardDescriptionBodyDisplay description={"aawith anticipation"} />
+        <TodoCardDescriptionDisplay description={"aawith anticipation"} />
       </div>
       <div>
-        <TodoCardDescriptionBodyTextArea description="aawith anticipation" />
+        <TodoCardDescriptionTextArea description="aawith anticipation" />
       </div>
       <div>
-        <TodoCardDescriptionBody item={item} />
+        <TodoCardDescription item={item} />
       </div>
     </div>
   );
