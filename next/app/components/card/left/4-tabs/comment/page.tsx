@@ -16,11 +16,19 @@ export default async function Page() {
     createdAt: new Date(),
   };
 
+  const item: TodoItem = {
+    id: "a",
+    title: "titleeee",
+    description: "descreeee",
+    status: "In Progress",
+    comments: [comment],
+  };
+
   return (
     <div className={styles.component}>
       <TodoCardCommentBodyDisplay commentBody={comment.body} />
       <TodoCardCommentBodyTextArea commentBody={comment.body} />
-      <TodoCardCommentBody comment={comment} />
+      <TodoCardCommentBody item={item} comment={comment} />
     </div>
   );
 }

@@ -1,11 +1,11 @@
 "use client";
 
-import { updateTodoItem } from "@/app/api/api";
-import { TodoItem } from "@/app/api/types";
+import { TodoItem, updateTodoDescription } from "@/app/api/types";
 import { ServerActionContext } from "@/app/components/ServerActionContext";
 import { useContext, useState } from "react";
 import { TodoCardDescriptionDisplay } from "./TodoCardDescriptionDisplay";
 import { TodoCardDescriptionTextArea } from "./TodoCardDescriptionTextArea";
+import { updateTodoDescriptionAction } from "@/app/api/actions";
 
 interface Props {
   item: TodoItem;
@@ -37,13 +37,13 @@ export function TodoCardDescription(props: Props) {
   }
 
   async function editFinished(newDescription: string) {
-    const newItem = { ...props.item, description: newDescription };
-
     // finish editing
+    setDescription(newDescription);
     setEdit(false);
 
-    // call server action
-    updateTodoItem(doCallServerAction, newItem);
+    if (doCallServerAction) {
+      updateTodoDescriptionAction(props.item.id, newDescription);
+    }
   }
 
   return edit ? (

@@ -1,13 +1,15 @@
 "use client";
 
 import { updateTodoComment } from "@/app/api/api";
-import { TodoComment } from "@/app/api/types";
+import { TodoComment, TodoItem } from "@/app/api/types";
 import { ServerActionContext } from "@/app/components/ServerActionContext";
 import { useContext, useState } from "react";
 import { TodoCardCommentBodyTextArea } from "./TodoCardCommentBodyTextArea";
 import { TodoCardCommentBodyDisplay } from "./TodoCardCommentBodyDisplay";
+import { updateTodoCommentAction } from "@/app/api/actions";
 
 interface Props {
+  item: TodoItem;
   comment: TodoComment;
 }
 
@@ -37,14 +39,13 @@ export function TodoCardCommentBody(props: Props) {
   }
 
   async function editFinished(newBody: string) {
-    const newComment = { ...props.comment, body: newBody };
-
     // finish editing
     setCommentBody(newBody);
     setEdit(false);
 
-    // call server action
-    updateTodoComment(doCallServerAction, newComment);
+    if (doCallServerAction) {
+      updateTodoCommentAction(props.item.id, props.comment.id, newBody);
+    }
   }
 
   return edit ? (

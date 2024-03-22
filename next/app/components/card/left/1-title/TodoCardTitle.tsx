@@ -1,11 +1,11 @@
 "use client";
 
-import { updateTodoItem } from "@/app/api/api";
 import { TodoItem } from "@/app/api/types";
 import { ServerActionContext } from "@/app/components/ServerActionContext";
 import { useContext, useState } from "react";
 import { TodoCardTitleDisplay } from "./TodoCardTitleDisplay";
 import { TodoCardTitleInput } from "./TodoCardTitleInput";
+import { updateTodoTitleAction } from "@/app/api/actions";
 
 interface Props {
   item: TodoItem;
@@ -37,14 +37,13 @@ export function TodoCardTitle(props: Props) {
   }
 
   async function editFinished(newTitle: string) {
-    const newItem = { ...props.item, title: newTitle };
-
     // finish editing
     setTitle(newTitle);
     setEdit(false);
 
-    // call server action
-    updateTodoItem(doCallServerAction, newItem);
+    if (doCallServerAction) {
+      updateTodoTitleAction(props.item.id, newTitle);
+    }
   }
 
   return edit ? (

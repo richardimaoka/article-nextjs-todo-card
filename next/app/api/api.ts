@@ -1,16 +1,4 @@
-import { updateTodoItemAction } from "./actions";
-import { TodoItem, TodoComment } from "./types";
-
-export async function updateTodoItem(
-  callServer: boolean,
-  newItem: TodoItem
-): Promise<TodoItem> {
-  if (callServer) {
-    return updateTodoItemAction(newItem);
-  } else {
-    return newItem;
-  }
-}
+import { TodoComment } from "./types";
 
 export async function updateTodoComment(
   callServer: boolean,

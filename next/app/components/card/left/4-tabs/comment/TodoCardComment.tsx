@@ -1,4 +1,4 @@
-import { TodoComment } from "@/app/api/types";
+import { TodoComment, TodoItem } from "@/app/api/types";
 import styles from "./TodoCardComment.module.css";
 import { TodoCardCommentAuthor } from "./TodoCardCommentAuthor";
 import { TodoCardCommentBodyDisplay } from "./TodoCardCommentBodyDisplay";
@@ -19,10 +19,18 @@ export function TodoCardComment(props: Props) {
     },
     createdAt: new Date(),
   };
+  const item: TodoItem = {
+    id: "a",
+    title: "titleeee",
+    description: "descreeee",
+    status: "In Progress",
+    comments: [comment],
+  };
+
   return (
     <div className={styles.component}>
       <TodoCardCommentAuthor />
-      <TodoCardCommentBody comment={comment} />
+      <TodoCardCommentBody item={item} comment={comment} />
     </div>
   );
 }
