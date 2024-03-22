@@ -12,15 +12,10 @@ export type TodoItem = {
 
 export type TodoStatus = "In Progress" | "Done" | "Canceled";
 
-export type TodoCommentAuthor = {
-  name: string;
-  imagePath: string;
-};
-
 export type TodoComment = {
   id: string;
   body: string;
-  author: TodoCommentAuthor;
+  author: TodoPerson;
   createdAt: string;
 };
 
@@ -33,7 +28,7 @@ export type TodoLabel = {
 export type TodoPerson = {
   id: string;
   name: string;
-  color: string;
+  imagePath: string;
 };
 
 // done
@@ -47,6 +42,14 @@ export function updateTodoDescription(
   newDescription: string
 ): TodoItem {
   return { ...todo, description: newDescription };
+}
+
+export function createTodoComment(
+  body: string,
+  author: TodoPerson
+): TodoComment {
+  const id = "A";
+  return { id: id, body: body, author: author, createdAt: "" };
 }
 
 // done

@@ -9,6 +9,7 @@ export default async function Page() {
     id: "a",
     title: "a",
     description: "a",
+    status: "In Progress",
   };
 
   return (
