@@ -18,19 +18,23 @@ export default async function Page() {
   return (
     <div className={styles.component}>
       <div>
-        <TodoCardStatusLabel />
+        <TodoCardStatusLabel status={"In Progress"} />
+        <TodoCardStatusLabel status={"Done"} />
+        <TodoCardStatusLabel status={"Canceled"} />
       </div>
+
       <div>
         <TodoCardStatusButton status="In Progress" />
       </div>
 
       <div>
-        <TodoCardStatus status={"In Progress"} />
-        <TodoCardStatus status={"Done"} />
-        <TodoCardStatus status={"Canceled"} />
+        <TodoStatusSelect currentStatus="In Progress" />
       </div>
 
-      <TodoStatusSelect />
+      <div>
+        <TodoCardStatus item={item} />
+      </div>
+
       <TodoCardDueDate />
     </div>
   );

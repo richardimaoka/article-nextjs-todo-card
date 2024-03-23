@@ -1,6 +1,15 @@
 .component {
+  position: relative;
+}
+
+.button {
   background-color: #f4a267;
 
   display: flex;
   width: max-content;
+}
+
+.select {
+  position: absolute;
+  display: none;
 }

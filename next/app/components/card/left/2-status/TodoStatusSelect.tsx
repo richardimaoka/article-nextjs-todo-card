@@ -1,14 +1,21 @@
+import { TodoStatus } from "@/app/api/types";
 import { TodoCardStatusLabel } from "./TodoCardStatusLabel";
 import styles from "./TodoStatusSelect.module.css";
 
-interface Props {}
+interface Props {
+  currentStatus: TodoStatus;
+}
 
 export function TodoStatusSelect(props: Props) {
   return (
     <div className={styles.component}>
-      <TodoCardStatusLabel status="In Progress" />
-      <TodoCardStatusLabel status="Done" />
-      <TodoCardStatusLabel status="Canceled" />
+      {props.currentStatus !== "In Progress" && (
+        <TodoCardStatusLabel status="In Progress" />
+      )}
+      {props.currentStatus !== "Done" && <TodoCardStatusLabel status="Done" />}
+      {props.currentStatus !== "Canceled" && (
+        <TodoCardStatusLabel status="Canceled" />
+      )}
     </div>
   );
 }
