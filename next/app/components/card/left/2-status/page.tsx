@@ -3,6 +3,8 @@ import { TodoItem } from "@/app/api/types";
 import styles from "./page.module.css";
 import { TodoCardStatusLabel } from "./TodoCardStatusLabel";
 import { TodoCardDueDate } from "./TodoCardDueDate";
+import { TodoCardStatusButton } from "./TodoCardStatusButton";
+import { TodoCardStatus } from "./TodoCardStatus";
 
 export default async function Page() {
   const item: TodoItem = {
@@ -14,7 +16,16 @@ export default async function Page() {
 
   return (
     <div className={styles.component}>
-      <TodoCardStatusLabel />
+      <div>
+        <TodoCardStatusLabel />
+      </div>
+      <div>
+        <TodoCardStatusButton />
+      </div>
+
+      <div>
+        <TodoCardStatus />
+      </div>
       <TodoCardDueDate />
     </div>
   );

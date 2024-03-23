@@ -1,0 +1,6 @@
+.component {
+  background-color: #f4a267;
+
+  display: flex;
+  width: max-content;
+}

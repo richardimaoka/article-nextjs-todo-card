@@ -1,12 +1,9 @@
-import styles from "./TodoCardStatusButton.module.css"
+import styles from "./TodoCardStatusButton.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
-
-interface Props {
-  
-}
+interface Props {}
 
 export function TodoCardStatusButton(props: Props) {
-  return (
-    <div className={styles.component}></div>
-  )
+  return <FontAwesomeIcon className={styles.component} icon={faAngleDown} />;
 }
