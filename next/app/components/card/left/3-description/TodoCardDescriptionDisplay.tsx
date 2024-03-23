@@ -8,8 +8,8 @@ interface Props {
 
 export function TodoCardDescriptionDisplay(props: Props) {
   return (
-    <div className={styles.component} onClick={props.onClick}>
+    <pre className={styles.component} onClick={props.onClick}>
       {props.description}
-    </div>
+    </pre>
   );
 }

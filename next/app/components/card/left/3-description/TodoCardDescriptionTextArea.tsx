@@ -1,4 +1,6 @@
-import { FocusEventHandler } from "react";
+"use client";
+
+import { FocusEventHandler, useEffect, useRef } from "react";
 import styles from "./TodoCardDescriptionTextArea.module.css";
 
 interface Props {
@@ -9,8 +11,17 @@ interface Props {
 }
 
 export function TodoCardDescriptionTextArea(props: Props) {
+  const ref = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    if (ref.current) {
+      console.log(ref.current.scrollHeight);
+    }
+  }, []);
+
   return (
     <textarea
+      ref={ref}
       className={styles.component}
       name="description"
       value={props.description}

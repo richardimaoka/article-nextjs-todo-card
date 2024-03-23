@@ -22,7 +22,7 @@ export function TodoCardTitle(props: Props) {
   // Dependency injection to call or not to call server action
   const doCallServerAction = useContext(ServerActionContext);
 
-  // Adjusting (stale) state when a prop changes - https://react.dev/learn/you-might-not-need-an-effect#adjusting-some-state-when-a-prop-changes
+  // Adjusting (stale) state when props change - https://react.dev/learn/you-might-not-need-an-effect#adjusting-some-state-when-a-prop-changes
   if (initialTitle !== props.item.description) {
     setTitle(props.item.description);
   }
