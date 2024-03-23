@@ -1,3 +1,5 @@
+"use client";
+
 import { TodoStatus } from "@/app/api/types";
 import { TodoCardStatusLabel } from "./TodoCardStatusLabel";
 import styles from "./TodoStatusSelect.module.css";
@@ -15,27 +17,27 @@ export function TodoStatusSelect(props: Props) {
     <div className={styles.component} onBlur={props.onBlur}>
       {props.currentStatus !== "In Progress" && (
         <div
-        // onClick={() => {
-        //   props.onSelect && props.onSelect("In Progress");
-        // }}
+          onClick={() => {
+            props.onSelect && props.onSelect("In Progress");
+          }}
         >
           <TodoCardStatusLabel status="In Progress" />
         </div>
       )}
       {props.currentStatus !== "Done" && (
         <div
-        // onClick={() => {
-        //   props.onSelect && props.onSelect("Done");
-        // }}
+          onClick={() => {
+            props.onSelect && props.onSelect("Done");
+          }}
         >
           <TodoCardStatusLabel status="Done" />
         </div>
       )}
       {props.currentStatus !== "Canceled" && (
         <div
-        // onClick={() => {
-        //   props.onSelect && props.onSelect("Canceled");
-        // }}
+          onClick={() => {
+            props.onSelect && props.onSelect("Canceled");
+          }}
         >
           <TodoCardStatusLabel status="Canceled" />
         </div>

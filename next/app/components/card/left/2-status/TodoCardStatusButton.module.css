@@ -7,6 +7,7 @@
 .icon {
   display: block;
   font-size: 10px;
+  color: inherit;
   padding: 13px;
   border-left: solid 1px #f5d5be;
 }

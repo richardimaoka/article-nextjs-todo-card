@@ -7,6 +7,7 @@ import { TodoCardStatusLabel } from "./TodoCardStatusLabel";
 import { TodoStatusSelect } from "./TodoStatusSelect";
 import { useContext, useEffect, useRef, useState } from "react";
 import { ServerActionContext } from "@/app/components/ServerActionContext";
+import { updateStatusAction } from "@/app/api/actions";
 
 interface Props {
   item: TodoItem;
@@ -32,6 +33,15 @@ export function TodoCardStatus(props: Props) {
 
   function editStart() {
     setEdit(true);
+  }
+
+  function editFinished(newStatus: TodoStatus) {
+    setEdit(false);
+    setStatus(newStatus);
+
+    if (doCallServerAction) {
+      updateStatusAction(props.item.id, newStatus);
+    }
   }
 
   async function editCanceled() {
@@ -79,7 +89,11 @@ export function TodoCardStatus(props: Props) {
 
       {edit && (
         <div className={styles.select} ref={ref}>
-          <TodoStatusSelect currentStatus={status} onBlur={editCanceled} />
+          <TodoStatusSelect
+            currentStatus={status}
+            onBlur={editCanceled}
+            onSelect={editFinished}
+          />
         </div>
       )}
     </div>
