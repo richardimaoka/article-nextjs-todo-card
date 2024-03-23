@@ -1,11 +1,14 @@
-import styles from "./TodoCardStatusButton.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { TodoStatus } from "@/app/api/types";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { MouseEventHandler } from "react";
+import styles from "./TodoCardStatusButton.module.css";
 import { backgroundColor, borderColor } from "./statusColors";
 
 interface Props {
   status: TodoStatus;
+  // optional args, so that you can check component's design alone
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
 export function TodoCardStatusButton(props: Props) {
@@ -13,10 +16,12 @@ export function TodoCardStatusButton(props: Props) {
   const brdColor = borderColor(props.status);
 
   return (
-    <FontAwesomeIcon
-      className={styles.component}
-      style={{ backgroundColor: bgColor, borderLeftColor: brdColor }}
-      icon={faAngleDown}
-    />
+    <button className={styles.component} onClick={props.onClick}>
+      <FontAwesomeIcon
+        className={styles.icon}
+        style={{ backgroundColor: bgColor, borderLeftColor: brdColor }}
+        icon={faAngleDown}
+      />
+    </button>
   );
 }
