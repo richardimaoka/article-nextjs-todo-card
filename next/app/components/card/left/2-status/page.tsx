@@ -5,6 +5,7 @@ import { TodoCardStatusLabel } from "./TodoCardStatusLabel";
 import { TodoCardDueDate } from "./TodoCardDueDate";
 import { TodoCardStatusButton } from "./TodoCardStatusButton";
 import { TodoCardStatus } from "./TodoCardStatus";
+import { TodoStatusSelect } from "./TodoStatusSelect";
 
 export default async function Page() {
   const item: TodoItem = {
@@ -20,7 +21,7 @@ export default async function Page() {
         <TodoCardStatusLabel />
       </div>
       <div>
-        <TodoCardStatusButton borderColor="#f3c29f" />
+        <TodoCardStatusButton status="In Progress" />
       </div>
 
       <div>
@@ -28,6 +29,8 @@ export default async function Page() {
         <TodoCardStatus status={"Done"} />
         <TodoCardStatus status={"Canceled"} />
       </div>
+
+      <TodoStatusSelect />
       <TodoCardDueDate />
     </div>
   );

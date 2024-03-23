@@ -1,16 +1,16 @@
 import { TodoStatus } from "@/app/api/types";
 import styles from "./TodoCardStatusLabel.module.css";
+import { backgroundColor } from "./statusColors";
 
 interface Props {
   status?: TodoStatus;
-  backgroundColor?: string;
 }
 
 export function TodoCardStatusLabel(props: Props) {
   const status = props.status ? props.status : "In Progress";
-  const color = props.backgroundColor ? props.backgroundColor : "#f4a267";
+  const bgColor = backgroundColor(status);
   return (
-    <div className={styles.component} style={{ backgroundColor: color }}>
+    <div className={styles.component} style={{ backgroundColor: bgColor }}>
       {status}
     </div>
   );
