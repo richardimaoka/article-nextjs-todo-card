@@ -20,11 +20,13 @@ export default async function Page() {
         <TodoCardStatusLabel />
       </div>
       <div>
-        <TodoCardStatusButton />
+        <TodoCardStatusButton borderColor="#f3c29f" />
       </div>
 
       <div>
-        <TodoCardStatus />
+        <TodoCardStatus status={"In Progress"} />
+        <TodoCardStatus status={"Done"} />
+        <TodoCardStatus status={"Canceled"} />
       </div>
       <TodoCardDueDate />
     </div>
