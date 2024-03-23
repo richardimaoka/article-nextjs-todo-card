@@ -3,14 +3,13 @@
   display: block;
 
   width: 100%;
-
-  min-height: 60px;
-  max-height: 300px;
+  height: 200px;
   overflow-y: auto;
 
   margin: 0px;
-  padding: 1px 3px;
+  padding: 0px 3px; /* height 3px = 4px - border 1 px */
   box-sizing: border-box;
+  border: solid 1px black;
 
   /* disable user's manual resize */
   resize: none;
