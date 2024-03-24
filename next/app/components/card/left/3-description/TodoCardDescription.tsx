@@ -13,19 +13,13 @@ interface Props {
 
 export function TodoCardDescription(props: Props) {
   // Initial description from props upon first rendering
-  const [initialDescription] = useState(props.item.description);
-  const [description, setDescription] = useState(initialDescription);
+  const [description, setDescription] = useState(props.item.description);
 
   // `edit` state allows title to temporarily diverge from props
   const [edit, setEdit] = useState(false);
 
   // Dependency injection to call or not to call server action
   const doCallServerAction = useContext(ServerActionContext);
-
-  // Adjusting (stale) state when props change - https://react.dev/learn/you-might-not-need-an-effect#adjusting-some-state-when-a-prop-changes
-  if (initialDescription !== props.item.description) {
-    setDescription(props.item.description);
-  }
 
   function editStart() {
     setEdit(true);
@@ -40,8 +34,9 @@ export function TodoCardDescription(props: Props) {
     // finish editing
     setDescription(newDescription);
     setEdit(false);
-
+    console.log("editFinished description", doCallServerAction);
     if (doCallServerAction) {
+      console.log("updateTodoDescriptionAction");
       updateTodoDescriptionAction(props.item.id, newDescription);
     }
   }

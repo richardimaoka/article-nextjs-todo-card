@@ -14,19 +14,13 @@ interface Props {
 
 export function TodoCardCommentBody(props: Props) {
   // Initial title from props upon first rendering
-  const [initialCommentBody] = useState(props.comment.body);
-  const [commentBody, setCommentBody] = useState(initialCommentBody);
+  const [commentBody, setCommentBody] = useState(props.comment.body);
 
   // `edit` state allows title to temporarily diverge from props
   const [edit, setEdit] = useState(false);
 
   // Dependency injection to call or not to call server action
   const doCallServerAction = useContext(ServerActionContext);
-
-  // Adjusting (stale) state when props change - https://react.dev/learn/you-might-not-need-an-effect#adjusting-some-state-when-a-prop-changes
-  if (initialCommentBody !== props.comment.body) {
-    setCommentBody(props.comment.body);
-  }
 
   function editStart() {
     setEdit(true);

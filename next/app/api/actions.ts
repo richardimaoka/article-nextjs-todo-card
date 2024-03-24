@@ -47,40 +47,6 @@ export async function send(args: any) {
   console.log(args);
 }
 
-export async function updateTodo(formData: FormData) {
-  const a = formData.get("title");
-  console.log(a);
-
-  // const url = "http://localhost:3036/items";
-  // const response = await fetch(url, {
-  //   method: "PATCH",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //   },
-  //   body: JSON.stringify({}),
-  // });
-
-  // return response.json();
-}
-
-export async function updateTodoItemAction(
-  newItem: TodoItem
-): Promise<TodoItem> {
-  console.log(`calling server action ${JSON.stringify(newItem)}`);
-
-  const url = `http://localhost:3036/items/${newItem.id}`;
-  const response = await fetch(url, {
-    method: "PATCH",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(newItem),
-  });
-
-  revalidatePath("/components/card/test");
-  return response.json();
-}
-
 export async function updateTodoTitleAction(
   todoId: string,
   newTitle: string
@@ -111,6 +77,10 @@ export async function updateTodoDescriptionAction(
   todoId: string,
   newDescription: string
 ): Promise<TodoItem> {
+  console.log(
+    `calling server action updateTodoDescriptionAction, todoId = '${todoId}', newDescription = '${newDescription}'`
+  );
+
   const url = `http://localhost:3036/items/${todoId}`;
 
   const getResponse = await fetch(url);
@@ -125,7 +95,7 @@ export async function updateTodoDescriptionAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/components/card/test");
+  revalidatePath("/items/edit");
   return response.json();
 }
 
@@ -134,6 +104,12 @@ export async function addTodoCommentAction(
   newCommentBody: string,
   author: TodoPerson
 ): Promise<TodoItem> {
+  console.log(
+    `calling server action addTodoCommentAction, todoId = '${todoId}', newCommentBody = '${newCommentBody}', author = ${JSON.stringify(
+      author
+    )}`
+  );
+
   const url = `http://localhost:3036/items/${todoId}`;
 
   const getResponse = await fetch(url);
@@ -149,7 +125,7 @@ export async function addTodoCommentAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/components/card/test");
+  revalidatePath("/items/edit");
   return response.json();
 }
 
@@ -157,6 +133,10 @@ export async function removeTodoCommentAction(
   todoId: string,
   commentId: string
 ): Promise<TodoItem> {
+  console.log(
+    `calling server action removeTodoCommentAction, todoId = '${todoId}', commentId = '${commentId}'`
+  );
+
   const url = `http://localhost:3036/items/${todoId}`;
 
   const getResponse = await fetch(url);
@@ -171,7 +151,7 @@ export async function removeTodoCommentAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/components/card/test");
+  revalidatePath("/items/edit");
   return response.json();
 }
 
@@ -180,6 +160,10 @@ export async function updateTodoCommentAction(
   commentId: string,
   newCommentBody: string
 ): Promise<TodoItem> {
+  console.log(
+    `calling server action updateTodoCommentAction, todoId = '${todoId}', commentId = '${commentId}', newCommentBody = '${newCommentBody}'`
+  );
+
   const url = `http://localhost:3036/items/${todoId}`;
 
   const getResponse = await fetch(url);
@@ -194,7 +178,7 @@ export async function updateTodoCommentAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/components/card/test");
+  revalidatePath("/items/edit");
   return response.json();
 }
 
@@ -202,6 +186,12 @@ export async function addTodoLabelAction(
   todoId: string,
   newLabel: TodoLabel
 ): Promise<TodoItem> {
+  console.log(
+    `calling server action addTodoLabelAction, todoId = '${todoId}', newLabel = ${JSON.stringify(
+      newLabel
+    )}`
+  );
+
   const url = `http://localhost:3036/items/${todoId}`;
 
   const getResponse = await fetch(url);
@@ -216,7 +206,7 @@ export async function addTodoLabelAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/components/card/test");
+  revalidatePath("/items/edit");
   return response.json();
 }
 
@@ -224,6 +214,10 @@ export async function removeTodoLabelAction(
   todoId: string,
   labelId: string
 ): Promise<TodoItem> {
+  console.log(
+    `calling server action removeTodoLabelAction, todoId = '${todoId}', labelId = '${labelId}'`
+  );
+
   const url = `http://localhost:3036/items/${todoId}`;
 
   const getResponse = await fetch(url);
@@ -238,7 +232,7 @@ export async function removeTodoLabelAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/components/card/test");
+  revalidatePath("/items/edit");
   return response.json();
 }
 
@@ -246,6 +240,12 @@ export async function addWatcherAction(
   todoId: string,
   newWatcher: TodoPerson
 ): Promise<TodoItem> {
+  console.log(
+    `calling server action addWatcherAction, todoId = '${todoId}', newWatcher = '${JSON.stringify(
+      newWatcher
+    )}'`
+  );
+
   const url = `http://localhost:3036/items/${todoId}`;
 
   const getResponse = await fetch(url);
@@ -260,13 +260,17 @@ export async function addWatcherAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/components/card/test");
+  revalidatePath("/items/edit");
   return response.json();
 }
 export async function removeWatcherAction(
   todoId: string,
   watcherId: string
 ): Promise<TodoItem> {
+  console.log(
+    `calling server action removeWatcherAction, todoId = '${todoId}', watcherId = '${watcherId}', `
+  );
+
   const url = `http://localhost:3036/items/${todoId}`;
 
   const getResponse = await fetch(url);
@@ -281,7 +285,7 @@ export async function removeWatcherAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/components/card/test");
+  revalidatePath("/items/edit");
   return response.json();
 }
 
@@ -289,6 +293,12 @@ export async function updateAssigneeAction(
   todoId: string,
   newAssignee: TodoPerson
 ): Promise<TodoItem> {
+  console.log(
+    `calling server action updateAssigneeAction, todoId = '${todoId}', newAssignee = '${JSON.stringify(
+      newAssignee
+    )}'`
+  );
+
   const url = `http://localhost:3036/items/${todoId}`;
 
   const getResponse = await fetch(url);
@@ -303,7 +313,7 @@ export async function updateAssigneeAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/components/card/test");
+  revalidatePath("/items/edit");
   return response.json();
 }
 
@@ -311,6 +321,10 @@ export async function updateStatusAction(
   todoId: string,
   newStatus: TodoStatus
 ): Promise<TodoItem> {
+  console.log(
+    `calling server action updateStatusAction, todoId = '${todoId}', newAssignee = '${newStatus}'`
+  );
+
   const url = `http://localhost:3036/items/${todoId}`;
 
   const getResponse = await fetch(url);
@@ -325,7 +339,7 @@ export async function updateStatusAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/components/card/test");
+  revalidatePath("/items/edit");
   return response.json();
 }
 
@@ -333,6 +347,10 @@ export async function updateDueDateAction(
   todoId: string,
   newDueDate: string
 ): Promise<TodoItem> {
+  console.log(
+    `calling server action updateDueDateAction, todoId = '${todoId}', newDueDate = '${newDueDate}'`
+  );
+
   const url = `http://localhost:3036/items/${todoId}`;
 
   const getResponse = await fetch(url);
@@ -347,6 +365,6 @@ export async function updateDueDateAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/components/card/test");
+  revalidatePath("/items/edit");
   return response.json();
 }
