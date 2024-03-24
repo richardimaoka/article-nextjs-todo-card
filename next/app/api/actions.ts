@@ -85,6 +85,10 @@ export async function updateTodoTitleAction(
   todoId: string,
   newTitle: string
 ): Promise<TodoItem> {
+  console.log(
+    `calling server action updateTodoTitleAction, todoId = '${todoId}', newTitle = '${newTitle}'`
+  );
+
   const url = `http://localhost:3036/items/${todoId}`;
 
   const getResponse = await fetch(url);
@@ -99,7 +103,7 @@ export async function updateTodoTitleAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/components/card/test");
+  revalidatePath("/items/edit");
   return response.json();
 }
 
