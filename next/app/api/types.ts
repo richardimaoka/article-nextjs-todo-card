@@ -216,3 +216,18 @@ export function updateDueDate(todo: TodoItem, newDueDate: string): TodoItem {
   const newTodo: TodoItem = { ...todo, dueDate: newDueDate };
   return newTodo;
 }
+
+// done
+export function crateEmptyTodo(): TodoItem {
+  // ID generation and timestamp are external dependencies but internalize them for simplicity
+  const id = uuidv4();
+  const now = new Date();
+
+  return {
+    id: id,
+    title: "",
+    description: "",
+    status: "In Progress",
+    dueDate: now.toDateString(),
+  };
+}

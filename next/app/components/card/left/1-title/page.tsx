@@ -15,10 +15,13 @@ export default async function Page() {
   return (
     <div className={styles.component}>
       <div>
-        <TodoCardTitleDisplay title="arrr" />
+        <TodoCardTitleDisplay title="" />
       </div>
       <div>
-        <TodoCardTitleInput title="arrr" />
+        <TodoCardTitleDisplay title="go shopping in the morning" />
+      </div>
+      <div>
+        <TodoCardTitleInput title="go shopping in the morning" />
       </div>
       <div>
         <TodoCardTitle item={item} />

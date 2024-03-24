@@ -7,9 +7,14 @@ interface Props {
 }
 
 export function TodoCardTitleDisplay(props: Props) {
+  const isEmpty = props.title === "";
+  const className = isEmpty
+    ? `${styles.component} ${styles.empty}`
+    : styles.component;
+
   return (
-    <h1 className={styles.component} onClick={props.onClick}>
-      {props.title}
+    <h1 className={className} onClick={props.onClick}>
+      {isEmpty ? "(Please click here and enter a title)" : props.title}
     </h1>
   );
 }
