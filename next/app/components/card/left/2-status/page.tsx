@@ -13,6 +13,7 @@ export default async function Page() {
     title: "a",
     description: "a",
     status: "In Progress",
+    dueDate: new Date().toDateString(),
   };
 
   return (
@@ -35,7 +36,7 @@ export default async function Page() {
         <TodoCardStatus item={item} />
       </div>
 
-      <TodoCardDueDate />
+      <TodoCardDueDate dateString={new Date().toDateString()} />
     </div>
   );
 }

@@ -10,6 +10,7 @@ export default async function Page() {
     title: "a",
     description: "a",
     status: "In Progress",
+    dueDate: new Date().toDateString()
   };
 
   return (

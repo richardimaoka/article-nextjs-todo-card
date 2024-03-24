@@ -34,9 +34,8 @@ export function TodoCardDescription(props: Props) {
     // finish editing
     setDescription(newDescription);
     setEdit(false);
-    console.log("editFinished description", doCallServerAction);
+
     if (doCallServerAction) {
-      console.log("updateTodoDescriptionAction");
       updateTodoDescriptionAction(props.item.id, newDescription);
     }
   }

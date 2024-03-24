@@ -16,7 +16,7 @@ export function TodoCardLeftSide(props: Props) {
         <TodoCardTitle item={props.item} />
       </div>
       <div className={styles.status}>
-        <TodoCardStatusBar />
+        <TodoCardStatusBar item={props.item} />
       </div>
       <div>
         <TodoCardDescriptionArea item={props.item} />

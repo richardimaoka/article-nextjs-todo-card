@@ -12,3 +12,8 @@
   /* In line with TodoCardDescriptionTextArea to avoid unexpected size shift */
   box-sizing: border-box;
 }
+
+.empty {
+  color: rgb(90, 90, 90);
+  font-weight: 400;
+}

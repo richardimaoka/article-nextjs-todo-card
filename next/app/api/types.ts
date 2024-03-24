@@ -5,7 +5,7 @@ export type TodoItem = {
   title: string;
   description: string;
   status: TodoStatus;
-  dueDate?: string;
+  dueDate: string;
   comments?: TodoComment[];
   labels?: TodoLabel[];
   assignee?: TodoPerson;

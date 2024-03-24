@@ -8,6 +8,7 @@ interface Props {
 
 export function TodoCardTitleDisplay(props: Props) {
   const isEmpty = props.title === "";
+
   const className = isEmpty
     ? `${styles.component} ${styles.empty}`
     : styles.component;

@@ -21,10 +21,6 @@ export function TodoCardTitle(props: Props) {
   // Dependency injection to call or not to call server action
   const doCallServerAction = useContext(ServerActionContext);
 
-  useEffect(() => {
-    console.log("rendering rendering");
-  }, []);
-
   function editStart() {
     setEdit(true);
   }

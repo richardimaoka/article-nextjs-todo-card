@@ -11,12 +11,16 @@ export default async function Page() {
     title: "titleeee",
     description: "descreeee",
     status: "In Progress",
+    dueDate: new Date().toDateString(),
   };
 
   return (
     <div className={styles.component}>
       <div>
         <TodoCardDescriptionTitle />
+      </div>
+      <div>
+        <TodoCardDescriptionDisplay description={""} />
       </div>
       <div>
         <TodoCardDescriptionDisplay description={"aawith anticipation"} />

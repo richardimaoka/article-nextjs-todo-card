@@ -1,15 +1,14 @@
-import { TodoCardCommentBodyDisplay } from "./4-tabs/comment/TodoCardCommentBodyDisplay";
-import { TodoCardDescriptionBody } from "./3-description/TodoCardDescriptionBody.1";
-import { TodoCardDescriptionBodyDisplay } from "./3-description/TodoCardDescriptionDisplay";
-import { TodoCardDescriptionTextArea } from "./3-description/TodoCardDescriptionTextArea";
-import { TodoCardDescriptionTitle } from "./3-description/TodoCardDescriptionTitle";
-import { TodoCardDueDate } from "./2-status/TodoCardDueDate";
-import { TodoCardProfilePicture } from "./4-tabs/comment/TodoCardProfilePicture";
-import { TodoCardStatusLabel } from "./2-status/TodoCardStatusLabel";
-import { TodoCardTab } from "./4-tabs/TodoCardTab";
-import { TodoCardTimestamp } from "./4-tabs/comment/TodoCardTimestamp";
 import { TodoCardTitleDisplay } from "./1-title/TodoCardTitleDisplay";
 import { TodoCardTitleInput } from "./1-title/TodoCardTitleInput";
+import { TodoCardDueDate } from "./2-status/TodoCardDueDate";
+import { TodoCardStatusLabel } from "./2-status/TodoCardStatusLabel";
+import { TodoCardDescriptionDisplay } from "./3-description/TodoCardDescriptionDisplay";
+import { TodoCardDescriptionTextArea } from "./3-description/TodoCardDescriptionTextArea";
+import { TodoCardDescriptionTitle } from "./3-description/TodoCardDescriptionTitle";
+import { TodoCardTab } from "./4-tabs/TodoCardTab";
+import { TodoCardCommentBodyDisplay } from "./4-tabs/comment/TodoCardCommentBodyDisplay";
+import { TodoCardProfilePicture } from "./4-tabs/comment/TodoCardProfilePicture";
+import { TodoCardTimestamp } from "./4-tabs/comment/TodoCardTimestamp";
 import styles from "./page.module.css";
 
 export default function Page() {
@@ -25,13 +24,13 @@ export default function Page() {
         <TodoCardStatusLabel />
       </div>
       <div>
-        <TodoCardDueDate />
+        <TodoCardDueDate dateString={new Date().toDateString()} />
       </div>
       <div>
         <TodoCardDescriptionTitle />
       </div>
       <div>
-        <TodoCardDescriptionBodyDisplay />
+        <TodoCardDescriptionDisplay description="" />
       </div>
       <div>
         <TodoCardDescriptionTextArea description="aawith anticipation" />
@@ -49,7 +48,7 @@ export default function Page() {
         <TodoCardTimestamp />
       </div>
       <div>
-        <TodoCardCommentBodyDisplay />
+        <TodoCardCommentBodyDisplay commentBody=""/>
       </div>
     </div>
   );

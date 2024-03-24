@@ -22,6 +22,7 @@ export default async function Page() {
     description: "descreeee",
     status: "In Progress",
     comments: [comment],
+    dueDate: new Date().toDateString(),
   };
 
   return (

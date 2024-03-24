@@ -45,7 +45,6 @@ export function TodoCardStatus(props: Props) {
   }
 
   async function editCanceled() {
-    console.log("edit cacneled");
     // cancel editing
     setEdit(false);
   }
