@@ -12,7 +12,7 @@ interface Props {
   comment: TodoComment;
 }
 
-export function TodoCardCommentBody(props: Props) {
+export function TodoCardComment(props: Props) {
   // Initial title from props upon first rendering
   const [commentBody, setCommentBody] = useState(props.comment.body);
 
