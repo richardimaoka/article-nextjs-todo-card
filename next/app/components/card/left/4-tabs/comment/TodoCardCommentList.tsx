@@ -1,5 +1,5 @@
 import { TodoItem } from "@/app/api/types";
-import { TodoCardComment } from "./TodoCardComment";
+import { TodoCardCommentCard } from "./TodoCardCommentCard";
 import styles from "./TodoCardCommentList.module.css";
 import { TodoCardCommentAddButton } from "./TodoCardCommentAddButton";
 
@@ -12,7 +12,7 @@ export function TodoCardCommentList(props: Props) {
     <div className={styles.component}>
       {props.item.comments &&
         props.item.comments?.map((x) => (
-          <TodoCardComment key={x.id} item={props.item} comment={x} />
+          <TodoCardCommentCard key={x.id} item={props.item} comment={x} />
         ))}
       <TodoCardCommentAddButton />
     </div>

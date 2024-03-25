@@ -9,6 +9,7 @@ import { updateTodoTitleAction } from "@/app/api/actions";
 
 interface Props {
   item: TodoItem;
+  edit?: boolean;
 }
 
 export function TodoCardTitle(props: Props) {
@@ -16,7 +17,8 @@ export function TodoCardTitle(props: Props) {
   const [title, setTitle] = useState(props.item.title);
 
   // `edit` state allows title to temporarily diverge from props
-  const [edit, setEdit] = useState(false);
+  const initialEditFlag = props.edit !== undefined && props.edit;
+  const [edit, setEdit] = useState(initialEditFlag);
 
   // Dependency injection to call or not to call server action
   const doCallServerAction = useContext(ServerActionContext);

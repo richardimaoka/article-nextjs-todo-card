@@ -1,5 +1,5 @@
 import { TodoComment, TodoItem } from "@/app/api/types";
-import styles from "./TodoCardComment.module.css";
+import styles from "./TodoCardCommentCard.module.css";
 import { TodoCardCommentAuthor } from "./TodoCardCommentAuthor";
 import { TodoCardCommentBody } from "./TodoCardCommentBody";
 
@@ -8,7 +8,7 @@ interface Props {
   item: TodoItem;
 }
 
-export function TodoCardComment(props: Props) {
+export function TodoCardCommentCard(props: Props) {
   return (
     <div className={styles.component}>
       <TodoCardCommentAuthor />

@@ -1,4 +1,4 @@
-import { TodoCardComment } from "../../left/4-tabs/comment/TodoCardComment";
+import { TodoCardCommentCard } from "../../left/4-tabs/comment/TodoCardCommentCard";
 import { TodoCardCommentAuthor } from "../../left/4-tabs/comment/TodoCardCommentAuthor";
 import { TodoCardCommentList } from "../../left/4-tabs/comment/TodoCardCommentList";
 import { TodoCardDescriptionArea } from "../../left/3-description/TodoCardDescriptionArea";
