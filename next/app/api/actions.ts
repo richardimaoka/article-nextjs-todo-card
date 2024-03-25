@@ -107,7 +107,7 @@ export async function addTodoCommentAction(
     `calling server action addTodoCommentAction, todoId = '${todoId}', newCommentBody = '${newCommentBody}'`
   );
 
-  const url = `http://localhost:3036/items/`;
+  const url = `http://localhost:3036/items/${todoId}`;
 
   // In production, the comment author should be figured out on the server side
   // using authentication info like `Authorization` header or cookies
@@ -123,7 +123,7 @@ export async function addTodoCommentAction(
   const newTodo = addTodoComment(todo, newComment);
 
   const response = await fetch(url, {
-    method: "POST",
+    method: "PATCH",
     headers: {
       "Content-Type": "application/json",
     },

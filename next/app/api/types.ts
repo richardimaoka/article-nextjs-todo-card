@@ -65,7 +65,7 @@ export function addTodoComment(
 ): TodoItem {
   // For simplicity, not checking if it already exists, but in produciton, handle error more explicitly
 
-  const newComments: TodoComment[] = todo.comments ? { ...todo.comments } : [];
+  const newComments: TodoComment[] = todo.comments ? [...todo.comments] : [];
 
   // Logic to update
   newComments.push(newComment);
@@ -132,7 +132,7 @@ export function createTodoLabel(name: string, color: string): TodoLabel {
 export function addTodoLabel(todo: TodoItem, newLabel: TodoLabel): TodoItem {
   // For simplicity, not checking if it already exists, but in produciton, handle error more explicitly
 
-  const newLabels: TodoLabel[] = todo.labels ? { ...todo.labels } : [];
+  const newLabels: TodoLabel[] = todo.labels ? [...todo.labels] : [];
 
   // Logic to update
   newLabels.push(newLabel);
@@ -166,7 +166,7 @@ export function removeTodoLabel(todo: TodoItem, labelId: string): TodoItem {
 export function addWatcher(todo: TodoItem, newWatcher: TodoPerson): TodoItem {
   // For simplicity, not checking if it already exists, but in produciton, handle error more explicitly
 
-  const newWatchers: TodoPerson[] = todo.watchers ? { ...todo.watchers } : [];
+  const newWatchers: TodoPerson[] = todo.watchers ? [...todo.watchers] : [];
 
   // Logic to update
   newWatchers.push(newWatcher);
