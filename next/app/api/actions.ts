@@ -69,7 +69,7 @@ export async function updateTodoTitleAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/items/edit");
+  revalidatePath(`/items/${todoId}`);
   return response.json();
 }
 
@@ -95,7 +95,7 @@ export async function updateTodoDescriptionAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/items/edit");
+  revalidatePath(`/items/${todoId}`);
   return response.json();
 }
 
@@ -130,7 +130,7 @@ export async function addTodoCommentAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/items/edit");
+  revalidatePath(`/items/${todoId}`);
   return response.json();
 }
 
@@ -156,7 +156,7 @@ export async function removeTodoCommentAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/items/edit");
+  revalidatePath(`/items/${todoId}`);
   return response.json();
 }
 
@@ -173,6 +173,7 @@ export async function updateTodoCommentAction(
 
   const getResponse = await fetch(url);
   const todo: TodoItem = await getResponse.json();
+
   const newTodo = updateTodoComment(todo, commentId, newCommentBody);
 
   const response = await fetch(url, {
@@ -183,7 +184,7 @@ export async function updateTodoCommentAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/items/edit");
+  revalidatePath(`/items/${todoId}`);
   return response.json();
 }
 
@@ -211,7 +212,7 @@ export async function addTodoLabelAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/items/edit");
+  revalidatePath(`/items/${todoId}`);
   return response.json();
 }
 
@@ -237,7 +238,7 @@ export async function removeTodoLabelAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/items/edit");
+  revalidatePath(`/items/${todoId}`);
   return response.json();
 }
 
@@ -265,7 +266,7 @@ export async function addWatcherAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/items/edit");
+  revalidatePath(`/items/${todoId}`);
   return response.json();
 }
 export async function removeWatcherAction(
@@ -290,7 +291,7 @@ export async function removeWatcherAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/items/edit");
+  revalidatePath(`/items/${todoId}`);
   return response.json();
 }
 
@@ -318,7 +319,7 @@ export async function updateAssigneeAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/items/edit");
+  revalidatePath(`/items/${todoId}`);
   return response.json();
 }
 
@@ -344,7 +345,7 @@ export async function updateStatusAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/items/edit");
+  revalidatePath(`/items/${todoId}`);
   return response.json();
 }
 
@@ -370,6 +371,6 @@ export async function updateDueDateAction(
     body: JSON.stringify(newTodo),
   });
 
-  revalidatePath("/items/edit");
+  revalidatePath(`/items/${todoId}`);
   return response.json();
 }

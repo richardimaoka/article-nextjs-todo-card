@@ -106,13 +106,13 @@ export function updateTodoComment(
 
   // For simplicity, upon failure, just return the unchanged todo, but in production, handle error more explicitly
   const index = todo.comments.findIndex((x) => x.id === commentId);
-  if (!index) return todo;
+  if (index < 0) return todo;
 
   // Logic to update
   const comment = todo.comments[index];
   const newComment: TodoComment = { ...comment, body: newCommentBody };
 
-  const newComments: TodoComment[] = { ...todo.comments };
+  const newComments: TodoComment[] = [...todo.comments];
   newComments[index] = newComment;
 
   const newTodo: TodoItem = { ...todo, comments: newComments };
@@ -149,7 +149,7 @@ export function removeTodoLabel(todo: TodoItem, labelId: string): TodoItem {
 
   // For simplicity, upon failure, just return the unchanged todo, but in production, handle error more explicitly
   const index = todo.labels.findIndex((x) => x.id === labelId);
-  if (!index) return todo;
+  if (index < 0) return todo;
 
   // Logic to update
   const newLabels: TodoLabel[] = { ...todo.labels };

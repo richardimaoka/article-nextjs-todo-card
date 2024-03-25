@@ -26,11 +26,6 @@ export function TodoCardStatus(props: Props) {
   // Dependency injection to call or not to call server action
   const doCallServerAction = useContext(ServerActionContext);
 
-  // Adjusting (stale) state when props change - https://react.dev/learn/you-might-not-need-an-effect#adjusting-some-state-when-a-prop-changes
-  if (initialStatus !== props.item.status) {
-    setStatus(props.item.status);
-  }
-
   function editStart() {
     setEdit(true);
   }
