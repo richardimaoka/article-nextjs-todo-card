@@ -3,8 +3,8 @@
 import { TodoComment, TodoItem } from "@/app/api/types";
 import { ServerActionContext } from "@/app/components/ServerActionContext";
 import { useContext, useState } from "react";
-import { TodoCardCommentBodyTextArea } from "./TodoCardCommentBodyTextArea";
-import { TodoCardCommentBodyDisplay } from "./TodoCardCommentBodyDisplay";
+import { TodoCardCommentTextArea } from "./TodoCardCommentTextArea";
+import { TodoCardCommentDisplay } from "./TodoCardCommentDisplay";
 import { updateTodoCommentAction } from "@/app/api/actions";
 
 interface Props {
@@ -42,12 +42,12 @@ export function TodoCardCommentBody(props: Props) {
   }
 
   return edit ? (
-    <TodoCardCommentBodyTextArea
+    <TodoCardCommentTextArea
       commentBody={commentBody}
       onBlur={(e) => editFinished(e.target.value)}
       onChange={(e) => editInProgress(e.target.value)}
     />
   ) : (
-    <TodoCardCommentBodyDisplay commentBody={commentBody} onClick={editStart} />
+    <TodoCardCommentDisplay commentBody={commentBody} onClick={editStart} />
   );
 }

@@ -1,4 +1,4 @@
-import styles from "./TodoCardCommentBodyDisplay.module.css";
+import styles from "./TodoCardCommentDisplay.module.css";
 
 interface Props {
   commentBody: string;
@@ -6,7 +6,7 @@ interface Props {
   onClick?: () => void;
 }
 
-export function TodoCardCommentBodyDisplay(props: Props) {
+export function TodoCardCommentDisplay(props: Props) {
   return (
     <div className={styles.component} onClick={props.onClick}>
       {props.commentBody}

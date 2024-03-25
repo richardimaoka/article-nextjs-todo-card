@@ -6,7 +6,7 @@ import { TodoCardDescriptionDisplay } from "./3-description/TodoCardDescriptionD
 import { TodoCardDescriptionTextArea } from "./3-description/TodoCardDescriptionTextArea";
 import { TodoCardDescriptionTitle } from "./3-description/TodoCardDescriptionTitle";
 import { TodoCardTab } from "./4-tabs/TodoCardTab";
-import { TodoCardCommentBodyDisplay } from "./4-tabs/comment/TodoCardCommentBodyDisplay";
+import { TodoCardCommentDisplay } from "./4-tabs/comment/TodoCardCommentDisplay";
 import { TodoCardProfilePicture } from "./4-tabs/comment/TodoCardProfilePicture";
 import { TodoCardTimestamp } from "./4-tabs/comment/TodoCardTimestamp";
 import styles from "./page.module.css";
@@ -48,7 +48,7 @@ export default function Page() {
         <TodoCardTimestamp />
       </div>
       <div>
-        <TodoCardCommentBodyDisplay commentBody=""/>
+        <TodoCardCommentDisplay commentBody="" />
       </div>
     </div>
   );

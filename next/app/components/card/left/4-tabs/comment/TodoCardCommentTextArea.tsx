@@ -1,5 +1,5 @@
 import { FocusEventHandler } from "react";
-import styles from "./TodoCardCommentBodyTextArea.module.css";
+import styles from "./TodoCardCommentTextArea.module.css";
 
 interface Props {
   commentBody: string;
@@ -8,7 +8,7 @@ interface Props {
   onChange?: FocusEventHandler<HTMLTextAreaElement>;
 }
 
-export function TodoCardCommentBodyTextArea(props: Props) {
+export function TodoCardCommentTextArea(props: Props) {
   return (
     <textarea
       className={styles.component}

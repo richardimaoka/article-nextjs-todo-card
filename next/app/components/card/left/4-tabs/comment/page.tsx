@@ -1,7 +1,7 @@
 import { TodoComment, TodoItem } from "@/app/api/types";
 import styles from "./page.module.css";
-import { TodoCardCommentBodyDisplay } from "./TodoCardCommentBodyDisplay";
-import { TodoCardCommentBodyTextArea } from "./TodoCardCommentBodyTextArea";
+import { TodoCardCommentDisplay } from "./TodoCardCommentDisplay";
+import { TodoCardCommentTextArea } from "./TodoCardCommentTextArea";
 import { TodoCardCommentBody } from "./TodoCardCommentBody";
 import { TodoCardCommentAddButton } from "./TodoCardCommentAddButton";
 
@@ -28,8 +28,8 @@ export default async function Page() {
 
   return (
     <div className={styles.component}>
-      <TodoCardCommentBodyDisplay commentBody={comment.body} />
-      <TodoCardCommentBodyTextArea commentBody={comment.body} />
+      <TodoCardCommentDisplay commentBody={comment.body} />
+      <TodoCardCommentTextArea commentBody={comment.body} />
       <TodoCardCommentBody item={item} comment={comment} />
       <TodoCardCommentAddButton />
     </div>

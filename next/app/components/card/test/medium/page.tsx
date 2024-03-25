@@ -5,7 +5,7 @@ import { TodoCardDescriptionArea } from "../../left/3-description/TodoCardDescri
 import { TodoCardStatusBar } from "../../left/2-status/TodoCardStatusBar";
 import { TodoCardTabArea } from "../../left/4-tabs/TodoCardTabArea";
 import { TodoCardTabBar } from "../../left/4-tabs/TodoCardTabBar";
-import { TodoCardCommentBodyDisplay } from "../../left/4-tabs/comment/TodoCardCommentBodyDisplay";
+import { TodoCardCommentDisplay } from "../../left/4-tabs/comment/TodoCardCommentDisplay";
 import { TodoCardDescription } from "../../left/3-description/TodoCardDescription";
 import { TodoCardDescriptionTitle } from "../../left/3-description/TodoCardDescriptionTitle";
 import { TodoCardDueDate } from "../../left/2-status/TodoCardDueDate";
