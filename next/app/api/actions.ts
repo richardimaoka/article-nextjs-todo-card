@@ -101,16 +101,21 @@ export async function updateTodoDescriptionAction(
 
 export async function addTodoCommentAction(
   todoId: string,
-  newCommentBody: string,
-  author: TodoPerson
+  newCommentBody: string
 ): Promise<TodoItem> {
   console.log(
-    `calling server action addTodoCommentAction, todoId = '${todoId}', newCommentBody = '${newCommentBody}', author = ${JSON.stringify(
-      author
-    )}`
+    `calling server action addTodoCommentAction, todoId = '${todoId}', newCommentBody = '${newCommentBody}'`
   );
 
   const url = `http://localhost:3036/items/${todoId}`;
+
+  // In production, the comment author should be figured out on the server side
+  // using authentication info like `Authorization` header or cookies
+  const author = {
+    id: "richardimaoka",
+    name: "Richard Imaoka",
+    imagePath: "/images/richard.jpg",
+  };
 
   const getResponse = await fetch(url);
   const todo: TodoItem = await getResponse.json();

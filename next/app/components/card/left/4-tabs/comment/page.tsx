@@ -4,6 +4,8 @@ import { TodoCardCommentDisplay } from "./TodoCardCommentDisplay";
 import { TodoCardCommentTextArea } from "./TodoCardCommentTextArea";
 import { TodoCardComment } from "./TodoCardComment";
 import { TodoCardCommentAddButton } from "./TodoCardCommentAddButton";
+import { TodoCardCommentCard } from "./TodoCardCommentCard";
+import { TodoCardNewComment } from "./TodoCardNewComment";
 
 export default async function Page() {
   const comment: TodoComment = {
@@ -31,7 +33,10 @@ export default async function Page() {
       <TodoCardCommentDisplay commentBody={comment.body} />
       <TodoCardCommentTextArea commentBody={comment.body} />
       <TodoCardComment item={item} comment={comment} />
+      <TodoCardCommentCard item={item} comment={comment} />
       <TodoCardCommentAddButton />
+
+      <TodoCardNewComment item={item} />
     </div>
   );
 }
