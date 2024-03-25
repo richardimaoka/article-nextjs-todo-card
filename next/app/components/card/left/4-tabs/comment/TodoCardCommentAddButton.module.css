@@ -1,0 +1,13 @@
+.component {
+  background-color: #f4a267;
+  color: white;
+
+  padding: 8px;
+  width: 150px;
+
+  font-size: 16px;
+
+  text-align: center;
+
+  border-style: none;
+}

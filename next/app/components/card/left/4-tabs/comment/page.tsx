@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import { TodoCardCommentBodyDisplay } from "./TodoCardCommentBodyDisplay";
 import { TodoCardCommentBodyTextArea } from "./TodoCardCommentBodyTextArea";
 import { TodoCardCommentBody } from "./TodoCardCommentBody";
+import { TodoCardCommentAddButton } from "./TodoCardCommentAddButton";
 
 export default async function Page() {
   const comment: TodoComment = {
@@ -30,6 +31,7 @@ export default async function Page() {
       <TodoCardCommentBodyDisplay commentBody={comment.body} />
       <TodoCardCommentBodyTextArea commentBody={comment.body} />
       <TodoCardCommentBody item={item} comment={comment} />
+      <TodoCardCommentAddButton />
     </div>
   );
 }
