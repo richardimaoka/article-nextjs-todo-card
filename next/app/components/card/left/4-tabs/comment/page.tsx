@@ -16,7 +16,7 @@ export default async function Page() {
       name: "richardimaoka",
       imagePath: "/images/richard.jpg",
     },
-    createdAt: new Date(),
+    createdAt: new Date().toDateString(),
   };
 
   const item: TodoItem = {

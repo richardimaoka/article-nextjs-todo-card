@@ -18,7 +18,7 @@ export type TodoComment = {
   id: string;
   body: string;
   author: TodoPerson;
-  createdAt: Date;
+  createdAt: string;
 };
 
 export type TodoLabel = {
@@ -55,7 +55,7 @@ export function createTodoComment(
   const id = uuidv4();
   const now = new Date();
 
-  return { id: id, body: body, author: author, createdAt: now };
+  return { id: id, body: body, author: author, createdAt: now.toDateString() };
 }
 
 // done

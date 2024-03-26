@@ -42,10 +42,16 @@ export default function Page() {
         <TodoCardTab tabName="Activities" />
       </div>
       <div>
-        <TodoCardProfilePicture />
+        <TodoCardProfilePicture
+          person={{
+            id: "",
+            name: "",
+            imagePath: "",
+          }}
+        />
       </div>
       <div>
-        <TodoCardTimestamp />
+        <TodoCardTimestamp createdAt={"2022/01/02"} />
       </div>
       <div>
         <TodoCardCommentDisplay commentBody="" />

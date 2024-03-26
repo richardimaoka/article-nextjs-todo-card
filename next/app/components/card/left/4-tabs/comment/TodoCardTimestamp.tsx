@@ -1,7 +1,9 @@
 import styles from "./TodoCardTimestamp.module.css";
 
-interface Props {}
+interface Props {
+  createdAt: string;
+}
 
 export function TodoCardTimestamp(props: Props) {
-  return <div className={styles.component}>Apr 4, 2024 at 14:00</div>;
+  return <div className={styles.component}>commented at {props.createdAt}</div>;
 }

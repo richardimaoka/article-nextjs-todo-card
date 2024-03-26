@@ -1,5 +1,6 @@
 .component {
-  font-size: 14px;
+  font-size: 12px;
+  color: rgb(121, 118, 118);
 
   width: max-content;
 }

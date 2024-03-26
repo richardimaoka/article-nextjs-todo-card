@@ -11,7 +11,7 @@ interface Props {
 export function TodoCardCommentCard(props: Props) {
   return (
     <div className={styles.component}>
-      <TodoCardCommentAuthor />
+      <TodoCardCommentAuthor comment={props.comment} />
       <TodoCardComment item={props.item} comment={props.comment} />
     </div>
   );
