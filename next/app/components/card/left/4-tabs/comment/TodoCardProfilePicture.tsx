@@ -8,8 +8,8 @@ export function TodoCardProfilePicture(props: Props) {
     <Image
       className={styles.component}
       src="/images/richard.jpg"
-      width={40}
-      height={40}
+      width={24}
+      height={24}
       alt={"profile picture"}
     />
   );
