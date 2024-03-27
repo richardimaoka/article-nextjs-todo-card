@@ -15,8 +15,8 @@ import { TodoCardTab } from "../../left/4-tabs/TodoCardTab";
 import { TodoCardTimestamp } from "../../left/4-tabs/comment/TodoCardTimestamp";
 import { TodoCardTitleDisplay } from "../../left/1-title/TodoCardTitleDisplay";
 
-import { TodoCardAssignee } from "../../right/1-assigneee/TodoCardAssignee";
-import { TodoCardAssingeeArea } from "../../right/1-assigneee/TodoCardAssingeeArea";
+import { TodoCardAssignee } from "../../right/1-assignee/TodoCardAssignee";
+import { TodoCardAssingeeArea } from "../../right/1-assignee/TodoCardAssingeeArea";
 import { TodoCardLabelsArea } from "../../right/3-label/TodoCardLabelsArea";
 import { TodoCardWatchersArea } from "../../right/2-watcher/TodoCardWatchersArea";
 import styles from "./page.module.css";

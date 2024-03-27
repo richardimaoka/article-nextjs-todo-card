@@ -1,6 +1,6 @@
-import { TodoCardAssigneeName } from "./1-assigneee/TodoCardAssigneeName";
-import { TodoCardAssigneePicture } from "./1-assigneee/TodoCardAssigneePicture";
-import { TodoCardAssigneeTitle } from "./1-assigneee/TodoCardAssigneeTitle";
+import { TodoCardAssigneeName } from "./1-assignee/TodoCardAssigneeName";
+import { TodoCardAssigneePicture } from "./1-assignee/TodoCardAssigneePicture";
+import { TodoCardAssigneeTitle } from "./1-assignee/TodoCardAssigneeTitle";
 import { TodoCardLabel } from "./3-label/TodoCardLabel";
 import { TodoCardLabelsTitle } from "./3-label/TodoCardLabelsTitle";
 import { TodoCardWatcherPicture } from "./2-watcher/TodoCardWatcherPicture";

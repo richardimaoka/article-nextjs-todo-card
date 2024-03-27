@@ -1,5 +1,5 @@
 import styles from "./TodoCardRightSide.module.css";
-import { TodoCardAssingeeArea } from "./right/1-assigneee/TodoCardAssingeeArea";
+import { TodoCardAssingeeArea } from "./right/1-assignee/TodoCardAssingeeArea";
 import { TodoCardLabelsArea } from "./right/3-label/TodoCardLabelsArea";
 import { TodoCardWatchersArea } from "./right/2-watcher/TodoCardWatchersArea";
 
