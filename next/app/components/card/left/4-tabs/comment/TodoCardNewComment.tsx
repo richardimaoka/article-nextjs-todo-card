@@ -2,10 +2,10 @@
 
 import { useContext, useState } from "react";
 
-import { ServerActionContext } from "@/app/components/ServerActionContext";
-import { TodoComment, TodoItem, TodoPerson } from "@/app/api/types";
-import { TodoCardCommentAddButton } from "./TodoCardCommentAddButton";
 import { addTodoCommentAction } from "@/app/api/actions";
+import { TodoItem } from "@/app/api/types";
+import { ServerActionContext } from "@/app/components/ServerActionContext";
+import { TodoCardCommentAddButton } from "./TodoCardCommentAddButton";
 import { TodoCardCommentTextArea } from "./TodoCardCommentTextArea";
 
 interface Props {
@@ -33,11 +33,12 @@ export function TodoCardNewComment(props: Props) {
 
   async function editFinished(newBody: string) {
     // finish editing
-    setCommentBody(newBody);
     setEdit(false);
 
-    if (doCallServerAction) {
+    // call server action only when newBody is not empty
+    if (newBody !== "" && doCallServerAction) {
       addTodoCommentAction(props.item.id, commentBody);
+      setCommentBody(""); //clear the state for the next attempt
     }
   }
 
